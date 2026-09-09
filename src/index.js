@@ -16,11 +16,6 @@ class AppController {
   }
 
   routes() {
-    // Método que define as rotas da API
-    const users = [];
-    this.express.get("/api", (req, res) => {
-      res.send({ status: "API NO AR" });
-    });
     this.express.use("/api-sprint/v1",router)
   }
 }
