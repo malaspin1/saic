@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/src/style/login.css">
+    <link rel="icon" href="../img/saic.png?v=2" type="image/png">
+</head>
+<body>
+
+    <header>
+        
+        <h1 id="logo">saic</h1>
+        <ul>
+            <li>Início</li>
+            <li>Como funciona?</li>
+            <li>Sobre</li>
+        </ul>
+        <div class="header_buttons_container">
+            <button id="entrar">Entrar</button>
+            <button id="criar">Criar conta</button>
+        </div>
+    </header>
+
+    <div id="div_login">
+        <button id="fecharLogin">X</button>
+        <h2 id="login">Login</h2>
+        <form id="formLogin">
+            <label for="email" id="emailText">E-mail:</label>
+            <input class="input-texto" type="email" name="email" id="emailInput" placeholder="Insira seu e-mail aqui" required>
+            <label for="senha" id="senhaText">Senha:</label>
+            <input class="input-texto" type="password" name="senha" id="senhaInput" placeholder="Digite sua senha" required>
+            <p id="cliqueCriar">Não tem conta? <span>Clique aqui</span> para criar</p>
+            <div class="lembre">
+                <input type="checkbox" id="checkBox">
+                <label id="checkText">Lembre de mim</label>
+            </div>
+            <button type="submit" id="buttonConfirmar">Confirmar</button>
+        </form>
+    </div>
+
+    <script>
+        document
+            .getElementById("formLogin")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                alert("Seja bem-vindo(a)! Você logou com sucesso.");
+            });
+    </script>
+
+
+</body>
+</html>
