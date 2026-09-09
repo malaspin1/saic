@@ -1,0 +1,17 @@
+{
+  "name": "api-1dds",
+  "version": "1.0.0",
+  "description": "Api da sprint",
+  "license": "ISC",
+  "author": "Otávio Ferreira",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
