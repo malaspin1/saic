@@ -18,16 +18,13 @@
 
     <header>
 
-        <h1 id="logo">saic</h1>
+        <h1 id="logo">saic - <span class="tittle_span">Especialistas</span></h1>
         <ul>
             <li>Início</li>
-            <li>Como funciona?</li>
+            <li><a class="list_links" href="loginUnidades.html">Saic - Unidades</a></li>
+            <li><a class="list_links" href="login.html">Saic - Pacientes</a></li>
             <li>Sobre</li>
         </ul>
-        <div class="header_buttons_container">
-            <button class="botao botao_entrar">Entrar</button>
-            <button class="botao botao_criar">Criar conta</button>
-        </div>
     </header>
 
     <form id="formulario_cadastro" class="formulario">
@@ -57,7 +54,7 @@
             .addEventListener("submit", function (event) {
                 event.preventDefault();
 
-                window.location.href = "cadastro3.html";
+                window.location.href = "cadastroEspecialistas3.html";
             });
         document
             .querySelector(".botao_entrar")

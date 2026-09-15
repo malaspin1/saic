@@ -7,7 +7,7 @@
 }
 
 header {
-  padding: 0 97px 0 97px;
+  padding: 0 120px 0 120px;
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -131,7 +131,7 @@ header ul li {
 }
 
 .botao:hover {
- cursor: pointer;
+  cursor: pointer;
 }
 
 .input_digitos {
@@ -150,4 +150,9 @@ header ul li {
 .list_links {
   color: white;
   text-decoration: none;
+}
+
+.tittle_span {
+  font-size: 2rem;
+  font-weight: 600;
 }

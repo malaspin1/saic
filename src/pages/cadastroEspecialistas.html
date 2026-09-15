@@ -18,32 +18,29 @@
 
     <header>
 
-        <h1 id="logo">saic</h1>
+        <h1 id="logo">saic - <span class="tittle_span">Especialistas</span></h1>
         <ul>
             <li>Início</li>
-            <li>Como funciona?</li>
+            <li><a class="list_links" href="loginUnidades.html">Saic - Unidades</a></li>
+            <li><a class="list_links" href="login.html">Saic - Pacientes</a></li>
             <li>Sobre</li>
         </ul>
-        <div class="header_buttons_container">
-            <button class="botao botao_entrar">Entrar</button>
-            <button class="botao botao_criar">Criar conta</button>
-        </div>
     </header>
 
     <form id="formulario_cadastro" class="formulario">
         <h2 class="titulo_form">Cadastro</h2>
 
-        <label for="input_email" class="input_label">Email:</label>
-        <input minlength="5" maxlength="150" class="input-texto" type="email" name="email" id="input_email"
-            placeholder="Insira seu email aqui" required>
+        <label for="input_nome" class="input_label">Nome Completo:</label>
+        <input minlength="2" maxlength="100" class="input-texto" type="text" name="nome" id="input_nome"
+            placeholder="Insira seu nome completo aqui" required>
 
-        <label for="input_telefone" class="input_label">Telefone:</label>
-        <input minlength="11" maxlength="11" class="input-texto" type="tel" name="telefone" id="input_telefone"
+        <label for="input_cpf" class="input_cpf">CPF:</label>
+        <input minlength="11" maxlength="11" class="input-texto" type="text" name="cpf" id="input_cpf"
             placeholder="Insira seu e-mail aqui" required>
 
-        <label for="input_senha" class="input_label">Defina sua Senha:</label>
-        <input class="input-texto" type="password" name="senha" id="input_senha" placeholder="Insira sua nova senha aqui" required>
-        <a class="link_form" href="login.html">Ja possui uma conta? <strong>Clique aqui</strong> para entrar</a>
+        <label for="input_datanasc" class="input_label">Data de Nascimento:</label>
+        <input class="input-texto" type="date" name="datanasc" id="input_datanasc" required>
+        <a class="link_form" href="cadastro.html">Ja possui uma conta? <strong>Clique aqui</strong> para entrar</a>
         <br>
         <input id="lembrardemim" type="checkbox" class="checkBox">
         <label for="lembrardemim" class="checkbox_label">Lembre de mim</label>
@@ -52,19 +49,19 @@
     </form>
 
     <script>
-       document
+        document
             .getElementById("formulario_cadastro")
             .addEventListener("submit", function (event) {
                 event.preventDefault();
 
-                window.location.href = "cadastro3.html";
+                window.location.href = "cadastroEspecialistas2.html";
             });
         document
             .querySelector(".botao_entrar")
             .addEventListener("click", function (event) {
                 event.preventDefault();
                 window.location.href = "login.html";
-            }); 
+            });
     </script>
 
 
