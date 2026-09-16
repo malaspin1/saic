@@ -1,69 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt_BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAIC - Login</title>
-    <link rel="stylesheet" href="/src/style/style.css">
-    <link rel="icon" href="../img/saic.png?v=2" type="image/png">
+    <link rel="stylesheet" href="/src/style/style.css" />
+    <link rel="icon" href="../img/saic.png?v=2" type="image/png" />
+  </head>
 
-    <!-- Importação da biblioteca de ícones Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
-        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-</head>
-
-<body>
-
+  <body>
     <header>
-
-        <h1 id="logo">saic - <span class="tittle_span">Especialistas</span></h1>
-        <ul>
-            <li>Início</li>
-            <li><a class="list_links" href="loginUnidades.html">Saic - Unidades</a></li>
-            <li><a class="list_links" href="login.html">Saic - Pacientes</a></li>
-            <li>Sobre</li>
-        </ul>
+      <h1 id="logo">saic - <span class="tittle_span">Especialistas</span></h1>
+      <ul>
+        <li>Início</li>
+        <li>
+          <a class="list_links" href="loginUnidades.html">Saic - Unidades</a>
+        </li>
+        <li><a class="list_links" href="login.html">Saic - Pacientes</a></li>
+        <li>Sobre</li>
+      </ul>
     </header>
 
     <form id="formulario_login" class="formulario">
-        <h2 class="titulo_form">Login</h2>
+      <h2 class="titulo_form">Login</h2>
 
-        <label for="input_email" class="input_label">E-mail:</label>
-        <input minlength="5" maxlength="150" class="input-texto" type="email" name="email" id="input_email"
-            placeholder="Insira seu e-mail aqui" required>
+      <label for="input_email" class="input_label">E-mail:</label>
+      <input
+        minlength="5"
+        maxlength="150"
+        class="input-texto"
+        type="email"
+        name="email"
+        id="input_email"
+        placeholder="Insira seu e-mail aqui"
+        required
+      />
 
-        <label for="input_senha" class="input_label">Senha:</label>
-        <input minlength="8" maxlength="50" class="input-texto" type="password" name="senha" id="input_senha"
-            placeholder="Digite sua senha" required>
-        <a class="link_form" href="cadastroEspecialistas.html">Não tem conta? <strong>Clique aqui</strong> para criar</a>
-        <br>
-        <input id="lembrardemim" type="checkbox" class="checkBox">
-        <label for="lembrardemim" class="checkbox_label">Lembre de mim</label>
-        <br>
-        <button type="submit" class="buttonConfirmar">Confirmar</button>
+      <label for="input_senha" class="input_label">Senha:</label>
+      <input
+        minlength="8"
+        maxlength="50"
+        class="input-texto"
+        type="password"
+        name="senha"
+        id="input_senha"
+        placeholder="Digite sua senha"
+        required
+      />
+      <a class="link_form" href="cadastroEspecialistas.html"
+        >Não tem conta? <strong>Clique aqui</strong> para criar</a
+      >
+      <br />
+      <input id="lembrardemim" type="checkbox" class="checkBox" />
+      <label for="lembrardemim" class="checkbox_label">Lembre de mim</label>
+      <br />
+      <button type="submit" class="buttonConfirmar">Confirmar</button>
     </form>
 
     <script>
-        document
-            .getElementById("formulario_login")
-            .addEventListener("submit", function (event) {
-                event.preventDefault();
+      document
+        .getElementById("formulario_login")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
-                alert("Seja bem-vindo(a)! Você logou com sucesso.");
-            });
+          alert("Seja bem-vindo(a)! Você logou com sucesso.");
+        });
 
-        document
-            .querySelector(".botao_criar")
-            .addEventListener("click", function (event) {
-                event.preventDefault();
-                window.location.href = "cadastroEspecialistas.html";
-            });
-
+      document
+        .querySelector(".botao_criar")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "cadastroEspecialistas.html";
+        });
     </script>
-
-
-</body>
-
+  </body>
 </html>
