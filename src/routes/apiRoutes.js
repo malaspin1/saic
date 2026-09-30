@@ -1,5 +1,12 @@
-import express from 'express'
+import express from "express";
 const router = express.Router();
-router.get('/sprint',(req,res)=>res.send({message:"api esta no ar"}))
+import especialidadesController from "../controller/especialidadesController.js";
 
-export default router
+// Rotas Especialidades
+
+router.post("/especialidade", especialidadesController.createEspecialidade);
+router.get("/especialidade", especialidadesController.getAllEspecialidades);
+router.put("/especialidade/:id", especialidadesController.updateEspecialidade);
+router.delete("/especialidade/:id", especialidadesController.deleteEspecialidade);
+
+export default router;
