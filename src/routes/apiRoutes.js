@@ -6,7 +6,7 @@ import especialidadesController from "../controller/especialidadesController.js"
 
 router.post("/especialidade", especialidadesController.createEspecialidade);
 router.get("/especialidade", especialidadesController.getAllEspecialidades);
-router.put("/especialidade/:id", especialidadesController.updateEspecialidade);
+router.put("/especialidade/", especialidadesController.updateEspecialidade);
 router.delete("/especialidade/:id", especialidadesController.deleteEspecialidade);
 
 export default router;
