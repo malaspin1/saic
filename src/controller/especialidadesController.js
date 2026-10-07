@@ -1,35 +1,49 @@
-let especialidades = [];
+import connect from "../db/connect.js";
 
 export default class especialidadesController {
-  // Metodo de criação de usuario
   static async createEspecialidade(req, res) {
-    let id = null;
     const { nome, descricao } = req.body;
     if (!nome || !descricao) {
       return res
         .status(400)
         .json({ error: "Todos os dados devem ser preenchidos" });
     }
-    if (especialidades.length > 0) {
-      id = especialidades[especialidades.length - 1].id + 1;
-    } else {
-      id = 1;
+    const query = `INSERT INTO especialidade (nome, descricao)
+      VALUES
+      (?, ?)`;
+    const values = [nome, descricao];
+    try {
+      connect.query(query, values, (err) => {
+        if (err) {
+          console.log(err);
+          return res.status(500).json({ error: "Erro interno do servidor." });
+        }
+        return res.status(201).json({ message: "Paciente cadastrado" });
+      });
+    } catch (error) {
+      console.log(error);
+      return res.status(500).jsonn({ error: "Erro interno do servidor." });
     }
-    especialidades.push({ id, nome, descricao });
-    console.log("Especialidade criada!");
-    return res
-      .status(201)
-      .json({ message: "Especialidadce criada com sucesso" });
   }
 
-  // Metodo de listagem de usuarios
   static async getAllEspecialidades(req, res) {
-    return res
-      .status(200)
-      .json({ message: "Lista de especialidades", especialidades });
+    const query = `SELECT * from especialidade`;
+    try {
+      connect.query(query, function (err, results) {
+        if (err) {
+          return res.status(500).json({ error: "Erro interno do servidor" });
+        }
+        return res.status(200).json({
+          message: "Lista de especialidades",
+          especialidades: results,
+        });
+      });
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({ error: "Erro interno do servidor" });
+    }
   }
 
-  // Metodo de atualização de usuario
   static async updateEspecialidade(req, res) {
     const { id, nome, descricao } = req.body;
     if (!id || !nome || !descricao) {
@@ -37,37 +51,47 @@ export default class especialidadesController {
         .status(400)
         .json({ error: "Todos os dados devem ser preenchidos" });
     }
-    const especialidadeIndex = especialidades.findIndex(
-      (especialidade) => especialidade.id == id,
-    );
-    if (especialidadeIndex === -1) {
-      return res.status(404).json({
-        error: "O Id informado não está cadastrado",
+    const query = `UPDATE especialidade SET 
+    nome=?,
+    descricao=?
+    WHERE id=?`;
+
+    const values = [id, nome, descricao];
+
+    try {
+      connect.query(query, values, (err, results) => {
+        if (err) {
+          console.log(err);
+          return res.status(500).json({ error: "Erro interno do servidor" });
+        }
+        if (results.affectedRows === 0) {
+          return res.status(404).json({ error: "Especialidade não encotrada" });
+        }
+        return res
+          .status(200)
+          .json({ message: "Especialidade atualizada com sucesso" });
       });
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({ error: "Erro interno do servidor" });
     }
-    especialidades[especialidadeIndex] = { id, nome, descricao };
-    console.log("Especialidade atualizada!");
-    return res
-      .status(201)
-      .json({ message: "Especialidadce atualizada com sucesso" });
   }
 
-  // Metodo de exclusão de Especialidade
   static async deleteEspecialidade(req, res) {
-    const { id } = req.params;
+    const idEspecialidade = req.params.id;
+    const query = `DELETE FROM especialidade WHERE id=?`;
 
-    const especialidadeIndex = especialidades.findIndex(
-      (user) => user.id == id,
-    );
-
-    if (especialidadeIndex === -1) {
-      return res.status(404).json({
-        error: "O Id informado não está cadastrado e não pode ser apagado",
-      });
-    } else {
-      especialidades.splice(especialidadeIndex, 1);
-
-      console.log("Especialidade deletada!");
-    }
+    connect.query(query, [idEspecialidade], (err, results) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).json({ error: "Erro interno do servidor" });
+      }
+      if (results.affectedRows === 0) {
+        return res.status(404).json({ error: "Especialidade não encotrada" });
+      }
+      return res
+        .status(200)
+        .json({ message: "Especialidade excluída com sucesso" });
+    });
   }
 }
