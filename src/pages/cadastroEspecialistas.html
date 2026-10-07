@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAIC - Cadastro</title>
-    <link rel="stylesheet" href="/src/style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <link rel="icon" href="../img/saic.png?v=2" type="image/png">
 
 </head>
@@ -32,11 +32,11 @@
 
         <label for="input_cpf" class="input_cpf">CPF:</label>
         <input minlength="11" maxlength="11" class="input-texto" type="text" name="cpf" id="input_cpf"
-            placeholder="Insira seu e-mail aqui" required>
+            placeholder="Insira seu cpf aqui" required>
 
         <label for="input_datanasc" class="input_label">Data de Nascimento:</label>
         <input class="input-texto" type="date" name="datanasc" id="input_datanasc" required>
-        <a class="link_form" href="cadastro.html">Ja possui uma conta? <strong>Clique aqui</strong> para entrar</a>
+        <a class="link_form" href="loginEspecialistas.html">Ja possui uma conta? <strong>Clique aqui</strong> para entrar</a>
         <br>
         <input id="lembrardemim" type="checkbox" class="checkBox">
         <label for="lembrardemim" class="checkbox_label">Lembre de mim</label>
@@ -56,7 +56,7 @@
             .querySelector(".botao_entrar")
             .addEventListener("click", function (event) {
                 event.preventDefault();
-                window.location.href = "login.html";
+                window.location.href = "loginEspecialistas.html";
             });
     </script>
 
