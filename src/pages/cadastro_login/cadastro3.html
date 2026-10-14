@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAIC - Cadastro</title>
+    <link rel="stylesheet" href="../../style/formulario.css">
+
+    <link rel="icon" href="../../img/saic.png?v=2" type="image/png">
+</head>
+
+<body>
+
+    <header>
+        <h1 id="logo">saic</h1>
+        <ul>
+            <li><a class="list_links" href="../pagina_inicial.html">Inicio</a></li>
+            <li><a class="list_links" href="../cadastroUnidades_login/loginUnidades.html">Saic - Unidades</a></li>
+            <li><a class="list_links" href="../cadastroEspecialista_login/loginEspecialistas.html">Saic - Especialistas</a></li>
+            <li><a class="list_links" href="../pagina_inicial.htm">Sobre</a></li>
+        <div class="header_buttons_container">
+            <button class="botao botao_entrar">Entrar</button>
+            <button class="botao botao_criar">Criar conta</button>
+        </div>
+    </header>
+
+    <form style="text-align: center;" id="formulario_cadastro" class="formulario">
+        <h2 class="titulo_form">Cadastro</h2>
+        <label for="dig1" class="label_confirmacao">Confirmar E-Mail:
+            <br>Insira o código de 5 dígitos que enviamos no seu E-mail</label>
+        <br><br><br><br>
+        <input maxlength="1" minlength="1" class="input_digitos" id="dig1" type="text" placeholder="X">
+        <input maxlength="1" minlength="1" class="input_digitos" id="dig2" type="text" placeholder="X">
+        <input maxlength="1" minlength="1" class="input_digitos" id="dig3" type="text" placeholder="X">
+        <input maxlength="1" minlength="1" class="input_digitos" id="dig4" type="text" placeholder="X">
+        <input maxlength="1" minlength="1" class="input_digitos" id="dig5" type="text" placeholder="X">
+        <br><br>
+
+        <button type="submit" id="submitcadastro" class="buttonConfirmar">Confirmar</button>
+    </form>
+
+    <script>
+        document.querySelector("#logo").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "../pagina_inicial.html";
+        });
+        document.getElementById("formulario_cadastro").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Seja bem-vindo(a)! Você se cadastrou com sucesso.");
+            window.location.href = "login.html";
+        });
+        document.querySelector(".botao_entrar").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "login.html";
+        });
+
+        const inputs = document.querySelectorAll(".input_digitos");
+        inputs.forEach((input, index) => {
+            input.addEventListener("input", () => {
+                if (input.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener("keydown", (event) => {
+                if (
+                    event.key === "Backspace" &&
+                    input.value === "" &&
+                    index > 0
+                ) {
+                    inputs[index - 1].focus();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

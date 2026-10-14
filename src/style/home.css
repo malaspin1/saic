@@ -10,6 +10,49 @@ body {
   background-color: #F4FAFC;
 }
 
+header {
+  padding: 0 120px 0 120px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  background-color: #176B87;
+}
+
+header h1 {
+  padding: 15px;
+  padding-bottom: 20px;
+  color: white;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+header ul {
+  display: flex;
+  gap: 30px;
+}
+
+header ul li {
+  font-size: 15px;
+  font-weight: 500;
+  list-style: none;
+  color: white;
+}
+
+.botao_entrar {
+  background-color: transparent;
+  font-size: 20px;
+  border: none;
+  font-weight: 500;
+  color: #F6F6F6;
+}
+
+.botao_criar {
+  padding: 13px 25px;
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
+  color: black;
+}
 
 
 .banner_1 {
@@ -155,4 +198,9 @@ body {
   width: 115px;
   height: 40px;
   cursor: pointer;
+}
+
+.list_links {
+  color: white;
+  text-decoration: none;
 }

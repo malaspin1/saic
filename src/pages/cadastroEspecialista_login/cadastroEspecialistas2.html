@@ -4,22 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAIC - Cadastro</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="icon" href="../img/saic.png?v=2" type="image/png">
+    <title>SAIC - Cadastro Especialista</title>
+    <link rel="stylesheet" href="../../style/formulario.css">
 
+    <link rel="icon" href="../../img/saic.png?v=2" type="image/png">
 </head>
 
 <body>
 
     <header>
-
         <h1 id="logo">saic - <span class="tittle_span">Especialistas</span></h1>
         <ul>
-            <li><a class="list_links" href="pagina_inicial.html">Inicio</a></li>
-            <li><a class="list_links" href="loginUnidades.html">Saic - Unidades</a></li>
-            <li><a class="list_links" href="login.html">Saic - Pacientes</a></li>
-            <li><a class="list_links" href="pagina_inicial.html">Sobre</a></li>
+            <li><a class="list_links" href="../pagina_inicial.html">Inicio</a></li>
+            <li><a class="list_links" href="../cadastroUnidades_login/loginUnidades.html">Saic - Unidades</a></li>
+            <li><a class="list_links" href="../cadastro_login/login.html">Saic - Pacientes</a></li>
         </ul>
     </header>
 
@@ -36,7 +34,7 @@
 
         <label for="input_senha" class="input_label">Defina sua Senha:</label>
         <input class="input-texto" type="password" name="senha" id="input_senha" placeholder="Insira sua nova senha aqui" required>
-        <a class="link_form" href="loginEspecialistas.html">Ja possui uma conta? <strong>Clique aqui</strong> para entrar</a>
+        <a class="link_form" href="loginEspecialistas.html">Já possui uma conta? <strong>Clique aqui</strong> para entrar</a>
         <br>
         <input id="lembrardemim" type="checkbox" class="checkBox">
         <label for="lembrardemim" class="checkbox_label">Lembre de mim</label>
@@ -45,27 +43,15 @@
     </form>
 
     <script>
-        document
-            .querySelector("#logo")
-            .addEventListener("click", function (event) {
-                event.preventDefault();
-                window.location.href = "pagina_inicial.html";
-            });
-       document
-            .getElementById("formulario_cadastro")
-            .addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                window.location.href = "cadastroEspecialistas3.html";
-            });
-        document
-            .querySelector(".botao_entrar")
-            .addEventListener("click", function (event) {
-                event.preventDefault();
-                window.location.href = "login.html";
-            }); 
+        document.querySelector("#logo").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "../pagina_inicial.html";
+        });
+        document.getElementById("formulario_cadastro").addEventListener("submit", function (event) {
+            event.preventDefault();
+            window.location.href = "cadastroEspecialistas3.html";
+        });
     </script>
-
 
 </body>
 
