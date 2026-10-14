@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  font-family: "Outfit", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #F4FAFC;
+}
+
+
+
+.banner_1 {
+  background-image: url(../img/banner1.png);
+  height: 80vh;
+  background-size: contain;
+  width: 77vw;
+  margin: auto;
+  position: relative;
+}
+
+.banner_botao_container {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  cursor: pointer;
+}
+
+.botao_fundo {
+  background-color: #35a77a;
+  padding: 10px 15px 10px 15px;
+  border: 2px solid #35a77a;
+  outline: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 14px;
+
+}
+
+.botao_contorno {
+  background-color: transparent;
+  padding: 10px 15px 10px 15px;
+  border: 2px solid #176b87;
+  outline: none;
+  color: #176b87;
+  border-radius: 14px;
+}
+.section_como_funciona {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85vh;
+}
+
+.section_como_funciona #como_funciona_titulo {
+  color: #35a77a;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 75px;
+  font-weight: 700;
+}
+
+.section_como_funciona h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.section_como_funciona #como_funciona_subtitulo {
+  color: #5C6B73;
+  text-align: center;
+  font-size: 14px;
+}
+
+#como_funciona_container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-bottom: 70px;
+}
+.como_funciona_card {
+  width: 345px;
+  height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.066);
+  border-radius: 25px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;  
+}
+
+.numero_card {
+  color: #176B87;
+  font-size: 40px;
+}
+
+.titulo_card {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.paragrafo_card {
+  color: rgba(0, 0, 0, 0.432);
+  font-size: 12.5px;
+}
+
+.footer {
+  box-sizing: border-box;
+  
+  background-image: url(../img/final.png);
+  background-size: contain;
+  
+  height: 65vh;
+  
+  
+  margin: auto;
+  position: relative;
+  display: flex;
+  
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  flex-direction: column; 
+  
+  font-size: 30px;
+  color: white;
+
+  text-align: center;
+
+  padding: 0 300px 0 300px;
+}
+
+.footer_a{
+  color: rgba(255, 255, 255, 0.674);
+  font-size: 15px;
+}
+
+.criar_botao{
+  background-color: transparent;
+  padding: 10px 15px 10px 15px;
+  border: 2px solid #176b87;
+  outline: none;
+  color: white;
+  background-color: #35a77a;
+  border-radius: 14px;
+  padding: 10px 15px 10px 15px;
+  outline: none;
+  width: 115px;
+  height: 40px;
+  cursor: pointer;
+}
