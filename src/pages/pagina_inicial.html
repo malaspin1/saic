@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAIC - Login</title>
+    <link rel="stylesheet" href="/src/style/style.css" />
+    <link rel="stylesheet" href="/src/style/home.css" />
+    <link rel="icon" href="../img/saic.png?v=2" type="image/png" />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="logo">saic</h1>
+      <ul>
+        <li>Início</li>
+        <li>
+          <a class="list_links" href="loginUnidades.html">Saic - Unidades</a>
+        </li>
+        <li>
+          <a class="list_links" href="loginEspecialistas.html"
+            >Saic - Especialistas</a
+          >
+        </li>
+        <li>Sobre</li>
+      </ul>
+      <div class="header_buttons_container">
+        <button class="botao botao_entrar">Entrar</button>
+        <button class="botao botao_criar">Criar conta</button>
+      </div>
+    </header>
+    <main>
+      <section class="banner_1">
+        <div class="banner_botao_container">
+          <button class="banner_botao botao_fundo">
+            Agendar Consulta Agora
+          </button>
+          <button class="banner_botao botao_contorno">
+            Ver Especialidades
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <div class="section_como_funciona">
+          <div class="section_tittle_group">
+            <p id="como_funciona_titulo">COMO FUNCIONA?</p>
+            <h2>Agendamento Inteligente em 3 etapas simples</h2>
+            <p id="como_funciona_subtitulo">
+              Entenda como organizamos o sistema para ser o mais fluido e
+              imediato possível para suas necessidades diárias.
+            </p>
+          </div>
+          <div id="como_funciona_container">
+            <div class="como_funciona_card">
+              <h3 class="numero_card">01</h3>
+              <h4 class="titulo_card">Crie sua conta rápida</h4>
+              <p class="paragrafo_card">
+                Complete seu cadastro básico com CPF e telefone em menos de 2
+                minutos de forma totalmente segura.
+              </p>
+            </div>
+            <div class="como_funciona_card">
+              <h3 class="numero_card">02</h3>
+              <h4 class="titulo_card">Busque a especialidade</h4>
+              <p class="paragrafo_card">
+                Pesquise por médicos, psicólogos, dentistas ou exames por
+                localização, plano ou atendimento particular.
+              </p>
+            </div>
+            <div class="como_funciona_card">
+              <h3 class="numero_card">03</h3>
+              <h4 class="titulo_card">Escolha o melhor horário</h4>
+              <p class="paragrafo_card">
+                Compare agendas virtuais integradas e marque em tempo real, com
+                confirmação e lembretes instantâneos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <h2 class="footer_tittle">
+          Pronto para simplificar sua rotina de agendamentos?
+        </h2>
+        <p class="footer_a">
+          Seja você um paciente buscando atendimento ágil ou um profissional
+          procurando otimizar seu consultório. Crie sua conta gratuita em poucos
+          passos.
+        </p>
+        <button class="criar_botao">Criar Conta</button>
+      </footer>
+    </main>
+    <script>
+      document
+        .querySelector(".botao_entrar")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+
+          window.location.href = "./login.html";
+        });
+      document
+        .querySelector(".botao_criar")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+
+          window.location.href = "./cadastro.html";
+        });
+      document
+        .querySelector(".criar_botao")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+
+          window.location.href = "./cadastro.html";
+        });
+    </script>
+  </body>
+</html>
