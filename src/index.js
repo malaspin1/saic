@@ -1,5 +1,7 @@
 import express from "express"; // Importando o modulo express
 import router from "./routes/apiRoutes.js";
+import testConnect from "./db/testConnect.js";
+
 class AppController {
   // Define a criação da classe AppController para organizar a lógica da nossa aplicação
   constructor() {
@@ -9,6 +11,7 @@ class AppController {
     this.middlewares();
     // Chama o método routes para definir as rotas da aplicação
     this.routes();
+    testConnect();
   }
   middlewares() {
     // Permite que a aplicação receba dados em JSON nas requisições
