@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAIC - Login</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="icon" href="../img/saic.png?v=2" type="image/png" />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="logo">saic - <span class="tittle_span">Unidades</span></h1>
+      <ul>
+        <li>Início</li>
+        <li>
+          <a class="list_links" href="loginUnidades.html">Saic - Unidades</a>
+        </li>
+        <li><a class="list_links" href="login.html">Saic - Pacientes</a></li>
+        <li>Sobre</li>
+      </ul>
+    </header>
+
+    <form id="formulario_login" class="formulario">
+      <h2 class="titulo_form">Cadastro</h2>
+
+      <label for="input_email" class="input_label">Unidade:</label>
+      <input
+        minlength="5"
+        maxlength="150"
+        class="input-texto"
+        type="text"
+        name="unidade"
+        id="input_unidade"
+        placeholder="Insira sua unidade aqui"
+        required
+      />
+
+      <label for="input_senha" class="input_label">Descrição unidade:</label>
+      <input
+        minlength="8"
+        maxlength="50"
+        class="input-texto"
+        type="text"
+        name="descricao"
+        id="input_descricao_unidade"
+        placeholder="Insira a descrição da unidade aqui"
+        required
+      />
+      <label for="input_cep" class="input_label">CEP:</label>
+      <input
+        type="text"
+        name="cep"
+        id="input_cep"
+        class="input-texto"
+        placeholder="00000000"
+        minlength="8"
+        maxlength="8"
+        pattern="[0-9]{8}"
+        inputmode="numeric"
+        required
+      />
+
+      <a class="link_form" href="cadastroUnidades.html"
+        >Não tem conta? <strong>Clique aqui</strong> para criar</a
+      >
+      <button type="submit" class="buttonConfirmar">Continuar</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("formulario_login")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          window.location.href = "cadastroUnidades2.html";
+        });
+
+      document
+        .querySelector(".botao_criar")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "cadastroEspecialistas.html";
+        });
+      document
+        .querySelector("#logo")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "pagina_inicial.html";
+        });
+    </script>
+  </body>
+</html>
