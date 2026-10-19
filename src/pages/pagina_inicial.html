@@ -93,26 +93,34 @@
       </footer>
     </main>
     <script>
+
       document
-        .querySelector(".botao_entrar")
+        .querySelector(".banner_botao:last-child")
         .addEventListener("click", function (event) {
           event.preventDefault();
 
-          window.location.href = "./login.html";
+          window.location.href = "./cadastro_login/login.html";
+        });
+      document
+        .querySelector(".banner_botao:first-child")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+
+          window.location.href = "./cadastro_login/login.html";
         });
       document
         .querySelector(".botao_criar")
         .addEventListener("click", function (event) {
           event.preventDefault();
 
-          window.location.href = "./cadastro.html";
+          window.location.href = "./cadastro_login/cadastro.html";
         });
       document
         .querySelector(".criar_botao")
         .addEventListener("click", function (event) {
           event.preventDefault();
 
-          window.location.href = "./cadastro.html";
+          window.location.href = "./cadastro_login/cadastro.html";
         });
     </script>
   </body>

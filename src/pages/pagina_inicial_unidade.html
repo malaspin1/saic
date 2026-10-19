@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAIC - Painel da Unidade</title>
+    <link rel="stylesheet" href="../style/pagina_pos_login.css" />
+    <link rel="icon" href="../img/saic.png?v=2" type="image/png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+
+  <body>
+    <!-- BARRA LATERAL -->
+    <aside class="barra_lateral">
+      <h1>saic</h1>
+      <nav>
+        <ul>
+          <li class="ativo"><a href="#"><i class="fa-solid fa-house"></i> Início</a></li>
+          <li><a href="#"><i class="fa-regular fa-calendar-check"></i> Consultas Marcadas</a></li>
+          <li><a href="#"><i class="fa-regular fa-clock"></i> Histórico de Consultas</a></li>
+          <li><a href="#"><i class="fa-solid fa-user-doctor"></i> Médicos</a></li>
+          <li><a href="#"><i class="fa-regular fa-building"></i> Unidade</a></li>
+          <li class="divisor"></li>
+          <li><a href="../pages/pagina_inicial.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+      <header>
+        <div>
+          <h1>Olá, Hospital Santa Aurora!</h1>
+          <p>Aqui está sua agenda.</p>
+          <div class="acoes_header">
+            <button class="botao botao_contorno"><i class="fa-regular fa-clock"></i> Ver Histórico Completo</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="grid_painel">
+        <div class="coluna_principal">
+          <!-- PRÓXIMA CONSULTA -->
+          <section class="cartao">
+            <span class="etiqueta_verde">PRÓXIMA CONSULTA</span>
+
+            <div class="info_pessoa">
+              <div class="icone_avatar"><i class="fa-regular fa-user"></i></div>
+              <div>
+                <h2>Miguel Silva</h2>
+                <p><span class="ponto_verde"></span> Consulta - Clínica geral</p>
+              </div>
+            </div>
+
+            <div class="rodape_cartao">
+              <div class="data_hora">
+                <span><i class="fa-regular fa-calendar"></i> 15 de Setembro, 2026</span>
+                <span><i class="fa-regular fa-clock"></i> 14:30</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- CONSULTAS MARCADAS -->
+          <section>
+            <div class="titulo_seccao">
+              <h2>Consultas Marcadas</h2>
+              <a href="#">Ver todas</a>
+            </div>
+
+            <div class="lista_consultas">
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm"><i class="fa-regular fa-user"></i></div>
+                  <div>
+                    <h3>Vitor Malaspini</h3>
+                    <p>Consulta - Oftalmo</p>
+                  </div>
+                </div>
+                <span class="data"><i class="fa-regular fa-calendar"></i> 15 Set, 12:59</span>
+              </div>
+
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm"><i class="fa-regular fa-user"></i></div>
+                  <div>
+                    <h3>Miguel Silva</h3>
+                    <p>Consulta - Clínica geral</p>
+                  </div>
+                </div>
+                <span class="data"><i class="fa-regular fa-calendar"></i> 15 Jul, 13:40</span>
+              </div>
+
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm"><i class="fa-regular fa-user"></i></div>
+                  <div>
+                    <h3>Gustavo Pimenta</h3>
+                    <p>Consulta - Clínica geral</p>
+                  </div>
+                </div>
+                <span class="data"><i class="fa-regular fa-calendar"></i> 15 Set, 10:30</span>
+              </div>
+
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm"><i class="fa-regular fa-user"></i></div>
+                  <div>
+                    <h3>Gustavo Pimenta</h3>
+                    <p>Consulta - Clínica geral</p>
+                  </div>
+                </div>
+                <span class="data"><i class="fa-regular fa-calendar"></i> 15 Set, 10:30</span>
+              </div>
+
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm"><i class="fa-regular fa-user"></i></div>
+                  <div>
+                    <h3>Otávio Sá</h3>
+                    <p>Consulta - Clínica geral</p>
+                  </div>
+                </div>
+                <span class="data"><i class="fa-regular fa-calendar"></i> 15 Set, 08:45</span>
+              </div>
+
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm"><i class="fa-regular fa-user"></i></div>
+                  <div>
+                    <h3>Otávio Sá</h3>
+                    <p>Consulta - Clínica geral</p>
+                  </div>
+                </div>
+                <span class="data"><i class="fa-regular fa-calendar"></i> 15 Set, 08:45</span>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- COLUNA DIREITA -->
+        <aside>
+          <section class="cartao cartao_historico">
+            <div class="titulo">
+              <i class="fa-regular fa-clock"></i>
+              <h3>Histórico de Consultas</h3>
+            </div>
+            <span class="numero">146</span>
+            <p>Consultas realizadas nos últimos 6 meses</p>
+            <button class="botao_detalhes">Ver detalhes</button>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>

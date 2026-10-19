@@ -1,0 +1,394 @@
+/* RESET E ESTILOS BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+body {
+  background-color: #f3f8fa;
+  color: #1e293b;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* BARRA LATERAL */
+.barra_lateral {
+  width: 230px;
+  background-color: #136c84;
+  color: #fff;
+  padding: 28px 18px;
+  flex-shrink: 0;
+}
+
+.barra_lateral h1 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 32px;
+  padding-left: 8px;
+}
+
+.barra_lateral ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.barra_lateral a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.barra_lateral a i {
+  font-size: 15px;
+  width: 18px;
+  text-align: center;
+}
+
+.barra_lateral li.ativo a,
+.barra_lateral a:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.barra_lateral .divisor {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.18);
+  margin: 12px 0;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+  flex: 1;
+  padding: 28px 40px;
+  overflow-y: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+header p {
+  color: #64748b;
+  font-size: 13px;
+  margin: 4px 0 16px;
+}
+
+.acoes_header {
+  display: flex;
+  gap: 12px;
+}
+
+/* PERFIL DE UTILIZADOR NO CABEÇALHO */
+.perfil_usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.perfil_usuario .avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #136c84;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.perfil_usuario strong {
+  font-weight: 700;
+  font-size: 13px;
+  color: #0f172a;
+  display: block;
+}
+
+.perfil_usuario small {
+  font-size: 11px;
+  color: #64748b;
+}
+
+/* BOTÕES REUTILIZÁVEIS */
+.botao {
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.botao_contorno {
+  border: 1px solid #136c84;
+  color: #136c84;
+  background: transparent;
+}
+
+.botao_fundo {
+  background-color: #299b75;
+  color: #fff;
+}
+
+.botao_cancelar {
+  border: 1px solid #991b1b;
+  color: #991b1b;
+  background: #fff;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botao_cancelar:hover {
+  background-color: #fef2f2;
+}
+
+.botao_detalhes {
+  background-color: #f0f7fa;
+  color: #136c84;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botao_detalhes:hover {
+  background-color: #e2f1f7;
+}
+
+/* GRELHA DO PAINEL */
+.grid_painel {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 20px;
+}
+
+.coluna_principal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* CARTÕES E ELEMENTOS */
+.cartao {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.etiqueta_verde {
+  display: inline-block;
+  background-color: #dcfce7;
+  color: #15803d;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  align-self: flex-start;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.info_pessoa {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icone_avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #f0f9ff;
+  color: #0369a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.icone_avatar.sm {
+  width: 38px;
+  height: 38px;
+  font-size: 15px;
+}
+
+.info_pessoa h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.info_pessoa h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.info_pessoa p {
+  font-size: 12px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.ponto_verde {
+  width: 6px;
+  height: 6px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.rodape_cartao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.data_hora {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.data_hora span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.data_hora i {
+  color: #136c84;
+}
+
+/* LISTA DE CONSULTAS MARCADAS */
+.titulo_seccao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.titulo_seccao h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.titulo_seccao a {
+  color: #0284c7;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.lista_consultas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item_consulta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.item_consulta .data {
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.item_consulta .data i {
+  color: #64748b;
+}
+
+/* CARTÃO DE HISTÓRICO (COLUNA DIREITA) */
+.cartao_historico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 18px;
+}
+
+.cartao_historico .titulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+
+.cartao_historico .titulo i {
+  color: #136c84;
+  font-size: 16px;
+}
+
+.cartao_historico .titulo h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cartao_historico .numero {
+  font-size: 42px;
+  font-weight: 800;
+  color: #299b75;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.cartao_historico p {
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 20px;
+  max-width: 170px;
+  line-height: 1.4;
+}

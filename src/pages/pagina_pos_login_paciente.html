@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAIC - Painel do Paciente</title>
+    <link rel="stylesheet" href="../style/pagina_pos_login.css" />
+    <link rel="icon" href="../img/saic.png?v=2" type="image/png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- BARRA LATERAL -->
+    <aside class="barra_lateral">
+      <h1>saic</h1>
+      <nav>
+        <ul>
+          <li class="ativo">
+            <a href="#"><i class="fa-solid fa-house"></i> Início</a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-regular fa-calendar-check"></i> Consultas
+              Marcadas</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-regular fa-clock"></i> Histórico de Consultas</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-magnifying-glass"></i> Buscar Médicos</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-user"></i> Perfil</a>
+          </li>
+          <li class="divisor"></li>
+          <li>
+            <a href="pagina_inicial.html"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+      <header>
+        <div>
+          <h1>Olá, Miguel!</h1>
+          <p>Como podemos cuidar da sua saúde hoje?</p>
+          <div class="acoes_header">
+            <button class="botao botao_contorno">
+              <i class="fa-regular fa-clock"></i> Ver Histórico Completo
+            </button>
+            <button class="botao botao_fundo">
+              <i class="fa-solid fa-circle-plus"></i> Agendar Nova Consulta
+            </button>
+          </div>
+        </div>
+
+        <div class="perfil_usuario">
+          <span class="avatar">M</span>
+          <div>
+            <strong>Miguel Silva</strong>
+            <small>Paciente</small>
+          </div>
+        </div>
+      </header>
+
+      <div class="grid_painel">
+        <div class="coluna_principal">
+          <!-- PRÓXIMA CONSULTA -->
+          <section class="cartao">
+            <span class="etiqueta_verde">PRÓXIMA CONSULTA</span>
+
+            <div class="info_pessoa">
+              <div class="icone_avatar"><i class="fa-regular fa-user"></i></div>
+              <div>
+                <h2>Dr. Ricardo Almeida</h2>
+                <p><span class="ponto_verde"></span> Cardiologia • CRM 12345</p>
+              </div>
+            </div>
+
+            <div class="rodape_cartao">
+              <div class="data_hora">
+                <span
+                  ><i class="fa-regular fa-calendar"></i> 15 de Setembro,
+                  2026</span
+                >
+                <span><i class="fa-regular fa-clock"></i> 14:30</span>
+              </div>
+              <button class="botao_cancelar">Cancelar</button>
+            </div>
+          </section>
+
+          <!-- CONSULTAS MARCADAS -->
+          <section>
+            <div class="titulo_seccao">
+              <h2>Consultas Marcadas</h2>
+              <a href="#">Ver todas</a>
+            </div>
+
+            <div class="lista_consultas">
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm">
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                  <div>
+                    <h3>Dra. Ana Costa</h3>
+                    <p>Dermatologia</p>
+                  </div>
+                </div>
+                <span class="data"
+                  ><i class="fa-regular fa-calendar"></i> 20 Set, 10:00</span
+                >
+                <button class="botao_cancelar">Cancelar</button>
+              </div>
+
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm">
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                  <div>
+                    <h3>Dr. Paulo Santos</h3>
+                    <p>Ortopedia</p>
+                  </div>
+                </div>
+                <span class="data"
+                  ><i class="fa-regular fa-calendar"></i> 05 Out, 09:25</span
+                >
+                <button class="botao_cancelar">Cancelar</button>
+              </div>
+
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm">
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                  <div>
+                    <h3>Dr. João T.</h3>
+                    <p>Oftalmologista</p>
+                  </div>
+                </div>
+                <span class="data"
+                  ><i class="fa-regular fa-calendar"></i> 15 Out, 14:30</span
+                >
+                <button class="botao_cancelar">Cancelar</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- COLUNA DIREITA -->
+        <aside>
+          <section class="cartao cartao_historico">
+            <div class="titulo">
+              <i class="fa-regular fa-clock"></i>
+              <h3>Histórico de Consultas</h3>
+            </div>
+            <span class="numero">08</span>
+            <p>Consultas realizadas nos últimos 6 meses</p>
+            <button class="botao_detalhes">Ver detalhes</button>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
