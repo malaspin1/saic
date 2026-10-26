@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 body {
@@ -438,11 +438,12 @@ header p {
   cursor: pointer;
 }
 
-
 .input_busca {
+  position: relative;
+
   display: inline-block;
 
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   padding: 10px 15px;
   width: 30vw;
   border-radius: 10px;
@@ -458,7 +459,7 @@ header p {
   width: 90%;
 }
 
-.filtros_botao {
+#filtro {
   display: inline-block;
   transform: translateY(-10%);
   font-size: 2rem;
@@ -493,10 +494,80 @@ header p {
 
 .agendar_button {
   color: white;
-  background-color: #35A77A;
+  background-color: #35a77a;
   padding: 10px 15px;
   border-radius: 10px;
   font-weight: 700;
   border: none;
   cursor: pointer;
+}
+
+.inverter {
+  transform: rotate(180deg);
+}
+
+#filtros {
+  display: none;
+
+  width: 450px;
+  height: 700px;
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.153);
+  position: absolute;
+  left: 660px;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.busca_filtros {
+  background-color: transparent;
+  border: none;
+}
+
+.input_filtros {
+  position: relative;
+
+  display: inline-block;
+
+  background-color: #f2f2f2;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.inputs_checkbox {
+  background-color: #f2f2f2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  border-radius: 10px;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.checkbox {
+  margin: 5px;
+  background-color: white;
+  width: 180px;
+  min-height: 50px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.checkbox input {
+  flex-shrink: 0;
+}
+
+.checkbox h3 {
+  margin: 0;
+  font-size: inherit;
 }
