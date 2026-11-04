@@ -204,3 +204,7 @@ header ul li {
   color: white;
   text-decoration: none;
 }
+
+.botao, #logo, .banner_botao {
+  cursor: pointer;
+} 
