@@ -22,6 +22,7 @@ body {
   flex-shrink: 0;
 }
 
+
 .barra_lateral h1 {
   font-size: 36px;
   font-weight: 800;
@@ -40,7 +41,7 @@ body {
 .barra_lateral button {
   background-color: transparent;
   border: none;
-
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -577,5 +578,75 @@ header p {
   transform: rotate(180deg) translateY(-45%);
   font-size: 2rem;
   color: rgba(0, 0, 0, 0.39);
+  cursor: pointer;
+}
+
+.input-texto {
+  font-weight: 400;
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 13px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  border: none;
+}
+
+.input_label {
+  font-size: 0.8rem;
+}
+
+.input-texto::placeholder {
+  color: #0000004d;
+}
+
+.perfil_usuario {
+  display: flex;
+  align-items: start;
+}
+
+.informacoes_principais {
+  border-right: 3px solid gray;
+}
+
+.informacoes_contato,
+.informacoes_principais {
+  width: 48%;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.input_nome_avatar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_nome {
+  width: 80%;
+}
+
+.avatar_perfil {
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  background-color: #036aa1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.salvar_alt_button {
+  color: white;
+  background-color: #35a77a;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
   cursor: pointer;
 }

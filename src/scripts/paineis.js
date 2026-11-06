@@ -1,6 +1,5 @@
 const codigos_html = {
   inicio: `
-  <!-- BARRA LATERAL -->
   <aside class="barra_lateral">
     <h1>saic</h1>
     <nav>
@@ -33,7 +32,6 @@ const codigos_html = {
     </nav>
   </aside>
 
-  <!-- CONTEÚDO PRINCIPAL -->
   <main>
     <header>
       <div>
@@ -60,7 +58,6 @@ const codigos_html = {
 
     <div class="grid_painel">
       <div class="coluna_principal">
-        <!-- PRÓXIMA CONSULTA -->
         <section class="cartao">
           <span class="etiqueta_verde">PRÓXIMA CONSULTA</span>
 
@@ -82,7 +79,6 @@ const codigos_html = {
           </div>
         </section>
 
-        <!-- CONSULTAS MARCADAS -->
         <section>
           <div class="titulo_seccao">
             <h2>Consultas Marcadas</h2>
@@ -135,7 +131,6 @@ const codigos_html = {
         </section>
       </div>
 
-      <!-- COLUNA DIREITA -->
       <aside>
         <section class="cartao cartao_historico">
           <div class="titulo">
@@ -152,7 +147,7 @@ const codigos_html = {
 
   <script src="../../scripts/paineis.js"></script>`,
   consultas_marc: `
-    <!-- BARRA LATERAL -->
+
     <aside class="barra_lateral">
         <h1>saic</h1>
         <nav>
@@ -188,7 +183,6 @@ const codigos_html = {
         </nav>
     </aside>
 
-    <!-- CONTEÚDO PRINCIPAL -->
     <main>
         <header>
             <div>
@@ -210,7 +204,7 @@ const codigos_html = {
             <h2>Consultas Marcadas</h2>
             <div class="consulta">
                 <div class="infos_medico">
-                    <img src="../../img/foto_medico.png">
+                    <img src="../img/foto_medico.png">
                     <span>
                         <h4>Dra. Ana Costa</h4>
                         <p>Dermatologia</p>
@@ -221,7 +215,7 @@ const codigos_html = {
             </div>
             <div class="consulta">
                 <div class="infos_medico">
-                    <img src="../../img/foto_medico.png">
+                    <img src="../img/foto_medico.png">
                     <span>
                         <h4>Dr. Paulo Costa</h4>
                         <p>Dermatologia</p>
@@ -232,7 +226,7 @@ const codigos_html = {
             </div>
             <div class="consulta">
                 <div class="infos_medico">
-                    <img src="../../img/foto_medico.png">
+                    <img src="../img/foto_medico.png">
                     <span>
                         <h4>Dr. João T.</h4>
                         <p>Dermatologia</p>
@@ -246,7 +240,7 @@ const codigos_html = {
 
         </div>
     </main>`,
-  historico_cons: `  <!-- BARRA LATERAL -->
+  historico_cons: `
   <aside class="barra_lateral">
     <h1>saic</h1>
     <nav>
@@ -279,7 +273,6 @@ const codigos_html = {
     </nav>
   </aside>
 
-  <!-- CONTEÚDO PRINCIPAL -->
   <main>
     <header>
       <div>
@@ -300,7 +293,7 @@ const codigos_html = {
             <h2>Histórico de Consultas</h2>
             <div class="consulta">
     <div class="infos_medico">
-        <img src="../../img/foto_medico.png" alt="Foto da médica">
+        <img src="../img/foto_medico.png" alt="Foto da médica">
         <span>
             <h4>Dra. Ana Costa</h4>
             <p>Dermatologia</p>
@@ -313,7 +306,7 @@ const codigos_html = {
 
 <div class="consulta">
     <div class="infos_medico">
-        <img src="../../img/foto_medico.png" alt="Foto do médico">
+        <img src="../img/foto_medico.png" alt="Foto do médico">
         <span>
             <h4>Dr. Paulo Santos</h4>
             <p>Ortopedia</p>
@@ -326,7 +319,7 @@ const codigos_html = {
 
 <div class="consulta">
     <div class="infos_medico">
-        <img src="../../img/foto_medico.png" alt="Foto do médico">
+        <img src="../img/foto_medico.png" alt="Foto do médico">
         <span>
             <h4>Dr. João T.</h4>
             <p>Oftalmologia</p>
@@ -339,7 +332,7 @@ const codigos_html = {
 
 <div class="consulta">
     <div class="infos_medico">
-        <img src="../../img/foto_medico.png" alt="Foto da médica">
+        <img src="../img/foto_medico.png" alt="Foto da médica">
         <span>
             <h4>Dra. Rafaela</h4>
             <p>Pediatria</p>
@@ -352,7 +345,7 @@ const codigos_html = {
 
 <div class="consulta">
     <div class="infos_medico">
-        <img src="../../img/foto_medico.png" alt="Foto da médica">
+        <img src="../img/foto_medico.png" alt="Foto da médica">
         <span>
             <h4>Dra. Maria C.</h4>
             <p>Neurologia</p>
@@ -1008,6 +1001,109 @@ const codigos_html = {
 
     <script src="../scripts/paineis.js"></script>
     <script src="../scripts/busca_medico.js"></script>`,
+  perfil: `    <aside class="barra_lateral">
+        <h1>saic</h1>
+        <nav>
+            <ul>
+                <li>
+                    <button href="#"><i class="fa-solid fa-house"></i> Início</button>
+                </li>
+                <li>
+                    <button onclick="trocarPagina('consultas_marc')" href="painel_paciente2.html">
+                        <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
+                    </button>
+                </li>
+                <li>
+                    <button onclick="trocarPagina('historico_cons')" href="#">
+                        <i class="fa-regular fa-clock"></i> Histórico de Consultas
+                    </button>
+                </li>
+                <li>
+                    <button onclick="trocarPagina('buscar_med')" href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i> Buscar Médicos
+                    </button>
+                </li>
+                <li class="ativo">
+                    <button onclick="trocarPagina('perfil')" href="#">
+                        <i class="fa-regular fa-user"></i> Perfil
+                    </button>
+                </li>
+                <li class="divisor"></li>
+                <li>
+                    <button onclick="sair()" href="pagina_inicial.html">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <header>
+            <div>
+                <h1>Olá, Miguel!</h1>
+                <p>Esse é o seu perfil, você pode alterar informações aqui.</p>
+            </div>
+        </header>
+
+        <section class="cartao">
+            <form>
+                <div class="perfil_usuario">
+                    <section class="informacoes_principais">
+                        <h2 id="informacoes_principais">Informações Principais</h2>
+
+                        <div class="input_nome_avatar">
+                            
+                            <div class="input_nome">
+                                <label for="input_nome" class="input_label">Nome:</label>
+                                <input minlength="5" maxlength="100" class="input-texto" type="text" name="nome"
+                                id="input_nome" placeholder="Insira seu nome completo aqui" required
+                                value="Miguel Silva">
+                            </div>
+                            
+                            <div class="avatar_perfil">
+                                <span class="icone_avatar_perfil">M</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="input_datanasc" class="input_label">Data de Nascimento:</label>
+                            <input class="input-texto" type="date" name="datanasc" id="input_datanasc" required>
+                        </div>
+
+                        <div>
+                            <label for="input_cpf" class="input_cpf">CPF:</label>
+                            <input minlength="11" maxlength="11" class="input-texto" type="text" name="cpf"
+                                id="input_cpf" placeholder="Insira seu cpf aqui" required value="AAAAAAAAAAA">
+                        </div>
+                    </section>
+
+                    <section class="informacoes_contato">
+                        <h2 id="informacoes_contato">Informações de Contato</h2>
+
+                        <div>
+                            <label for="input_email" class="input_label">Email:</label>
+                            <input minlength="5" maxlength="150" class="input-texto" type="email" name="email"
+                                id="input_email" placeholder="Insira seu email aqui" required
+                                value="miguelsilva@email.com">
+                        </div>
+
+                        <div>
+                            <label for="input_telefone" class="input_label">Telefone:</label>
+                            <input minlength="11" maxlength="11" class="input-texto" type="tel" name="telefone"
+                                id="input_telefone" placeholder="Insira seu telefone aqui" required
+                                value="1699873208235">
+                        </div>
+                    </section>
+                </div>
+
+                <button type="submit" class="salvar_alt_button">
+                    Salvar Alterações
+                </button>
+            </form>
+        </section>
+        <script src="../scripts/paineis.js"></script>
+    </main>`
 };
 
 function carregarScripts() {
@@ -1033,5 +1129,8 @@ function trocarPagina(destino) {
     document.body.innerHTML = codigos_html.busca_medico;
 
     inicializarBuscaMedico();
+  }
+  else if (destino === "perfil"){
+    document.body.innerHTML = codigos_html.perfil;
   }
 }
