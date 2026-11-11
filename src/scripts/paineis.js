@@ -5,34 +5,33 @@ const codigos_html = {
       <nav>
         <ul>
           <li class="ativo">
-            <button href="#"><i class="fa-solid fa-house"></i> Início</button>
+            <button onclick="trocarPagina('inicio')"><i class="fa-solid fa-house"></i> Início</button>
           </li>
           <li>
             <button
               onclick="trocarPagina('consultas_marc')"
-              href="painel_paciente2.html"
             >
               <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('historico_cons')" href="#">
+            <button onclick="trocarPagina('historico_cons')">
               <i class="fa-regular fa-clock"></i> Histórico de Consultas
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('buscar_med')" href="#">
+            <button onclick="trocarPagina('buscar_med')">
               <i class="fa-solid fa-magnifying-glass"></i> Buscar Médicos
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('perfil')" href="#">
+            <button onclick="trocarPagina('perfil')">
               <i class="fa-regular fa-user"></i> Perfil
             </button>
           </li>
           <li class="divisor"></li>
           <li>
-            <button onclick="sair()" href="pagina_inicial.html">
+            <button onclick="sair()">
               <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
             </button>
           </li>
@@ -92,7 +91,7 @@ const codigos_html = {
           <section>
             <div class="titulo_seccao">
               <h2>Consultas Marcadas</h2>
-              <button onclick="trocarPagina('consultas_marc')" class="link_button" href="#">Ver todas</button>
+              <button onclick="trocarPagina('consultas_marc')" class="link_button">Ver todas</button>
             </div>
 
             <div class="lista_consultas">
@@ -159,11 +158,7 @@ const codigos_html = {
           </section>
         </aside>
       </div>
-    </main>
-
-    <script src="../scripts/paineis.js"></script>
-    <script src="../scripts/busca_medico.js"></script>
-    <script src="../scripts/painel_paciente.js"></script>`,
+    </main>`,
   consultas_marc: `
 
     <aside class="barra_lateral">
@@ -171,29 +166,29 @@ const codigos_html = {
         <nav>
             <ul>
                 <li>
-                    <button onclick="trocarPagina('inicio')" href="#"><i class="fa-solid fa-house"></i> Início</button>
+                    <button onclick="trocarPagina('inicio')"><i class="fa-solid fa-house"></i> Início</button>
                 </li>
                 <li  class="ativo">
-                    <button href="painel_paciente2.html"><i
+                    <button><i
                             class="fa-regular fa-calendar-check"></i> Consultas
                         Marcadas</button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('historico_cons')" href="#"><i class="fa-regular fa-clock"></i>
+                    <button onclick="trocarPagina('historico_cons')"><i class="fa-regular fa-clock"></i>
                         Histórico de
                         Consultas</button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('buscar_med')" href="#"><i class="fa-solid fa-magnifying-glass"></i>
+                    <button onclick="trocarPagina('buscar_med')"><i class="fa-solid fa-magnifying-glass"></i>
                         Buscar
                         Médicos</button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('perfil')" href="#"><i class="fa-regular fa-user"></i> Perfil</button>
+                    <button onclick="trocarPagina('perfil')"><i class="fa-regular fa-user"></i> Perfil</button>
                 </li>
                 <li class="divisor"></li>
                 <li>
-                    <button onclick="sair()" href="pagina_inicial.html"><i
+                    <button onclick="sair()"><i
                             class="fa-solid fa-arrow-right-from-bracket"></i>
                         Sair</button>
                 </li>
@@ -207,9 +202,8 @@ const codigos_html = {
                 <h1>Olá, Miguel!</h1>
                 <p>Essas são suas consultas marcadas!</p>
             </div>
-            </div>
 
-            <div class="perfil_usuario">
+            <div onclick="trocarPagina('perfil')" class="perfil_usuario">
                 <span class="avatar">M</span>
                 <div>
                     <strong>Miguel Silva</strong>
@@ -224,39 +218,36 @@ const codigos_html = {
                 <div class="infos_medico">
                     <img src="../img/foto_medico.png">
                     <span>
-                        <h4>Dra. Ana Costa</h4>
-                        <p>Dermatologia</p>
+                        <h4 class="nome">Dra. Ana Costa</h4>
+                        <p class="especialidade">Dermatologia</p>
                     </span>
                 </div>
-                <span class="infos_consulta"><i class="fa-regular fa-calendar"></i> 20 Set, 10:00</span>
-                <buttton class="botao_cancelar_consulta">Cancelar</buttton>
+                <span class="infos_consulta data"><i class="fa-regular fa-calendar"></i> 20 Set, 10:00</span>
+                <button onclick="cancelarConsulta(this, 'lista')" class="botao_cancelar_consulta">Cancelar</button>
             </div>
             <div class="consulta">
                 <div class="infos_medico">
                     <img src="../img/foto_medico.png">
                     <span>
-                        <h4>Dr. Paulo Costa</h4>
-                        <p>Dermatologia</p>
+                        <h4 class="nome">Dr. Paulo Costa</h4>
+                        <p class="especialidade">Dermatologia</p>
                     </span>
                 </div>
-                <span class="infos_consulta"><i class="fa-regular fa-calendar"></i> 05 Out, 09:25</span>
-                <buttton class="botao_cancelar_consulta">Cancelar</buttton>
+                <span class="infos_consulta data"><i class="fa-regular fa-calendar"></i> 05 Out, 09:25</span>
+                <button onclick="cancelarConsulta(this, 'lista')" class="botao_cancelar_consulta">Cancelar</button>
             </div>
             <div class="consulta">
                 <div class="infos_medico">
                     <img src="../img/foto_medico.png">
                     <span>
-                        <h4>Dr. João T.</h4>
-                        <p>Dermatologia</p>
+                        <h4 class="nome">Dr. João T.</h4>
+                        <p class="especialidade">Dermatologia</p>
                     </span>
                 </div>
-                <span class="infos_consulta"><i class="fa-regular fa-calendar"></i> 15 Out, 14:30</span>
-                <buttton class="botao_cancelar_consulta">Cancelar</buttton>
+                <span class="infos_consulta data"><i class="fa-regular fa-calendar"></i> 15 Out, 14:30</span>
+                <button onclick="cancelarConsulta(this, 'lista')" class="botao_cancelar_consulta">Cancelar</button>
             </div>
         </section>
-
-
-        </div>
     </main>`,
   historico_cons: `
   <aside class="barra_lateral">
@@ -264,27 +255,27 @@ const codigos_html = {
     <nav>
       <ul>
         <li>
-          <button onclick="trocarPagina('inicio')" href="#"><i class="fa-solid fa-house"></i> Início</button>
+          <button onclick="trocarPagina('inicio')"><i class="fa-solid fa-house"></i> Início</button>
         </li>
         <li>
-          <button onclick="trocarPagina('consultas_marc')" href="painel_paciente2.html"><i
+          <button onclick="trocarPagina('consultas_marc')"><i
               class="fa-regular fa-calendar-check"></i> Consultas
             Marcadas</button>
         </li>
         <li class="ativo">
-          <button href="#"><i class="fa-regular fa-clock"></i> Histórico de
+          <button><i class="fa-regular fa-clock"></i> Histórico de
             Consultas</button>
         </li>
         <li>
-          <button onclick="trocarPagina('buscar_med')" href="#"><i class="fa-solid fa-magnifying-glass"></i> Buscar
+          <button onclick="trocarPagina('buscar_med')"><i class="fa-solid fa-magnifying-glass"></i> Buscar
             Médicos</button>
         </li>
         <li>
-          <button onclick="trocarPagina('perfil')" href="#"><i class="fa-regular fa-user"></i> Perfil</button>
+          <button onclick="trocarPagina('perfil')"><i class="fa-regular fa-user"></i> Perfil</button>
         </li>
         <li class="divisor"></li>
         <li>
-          <button onclick="sair()" href="pagina_inicial.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <button onclick="sair()"><i class="fa-solid fa-arrow-right-from-bracket"></i>
             Sair</button>
         </li>
       </ul>
@@ -298,7 +289,7 @@ const codigos_html = {
         <p>Esse é seu histórico de consultas</p>
       </div>
 
-      <div class="perfil_usuario">
+      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
         <span class="avatar">M</span>
         <div>
           <strong>Miguel Silva</strong>
@@ -376,45 +367,42 @@ const codigos_html = {
         </section>
 
 
-  </main>
-
-  <script src="../../scripts/paineis.js"></script>`,
+  </main>`,
   busca_medico: `
     <aside class="barra_lateral">
       <h1>saic</h1>
       <nav>
         <ul>
           <li>
-            <button onclick="trocarPagina('inicio')" href="#">
+            <button onclick="trocarPagina('inicio')">
               <i class="fa-solid fa-house"></i> Início
             </button>
           </li>
           <li>
             <button
               onclick="trocarPagina('consultas_marc')"
-              href="painel_paciente2.html"
             >
               <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
             </button>
           </li>
           <li>
-            <button href="#">
+            <button onclick="trocarPagina('historico_cons')">
               <i class="fa-regular fa-clock"></i> Histórico de Consultas
             </button>
           </li>
           <li class="ativo">
-            <button onclick="trocarPagina('buscar_med')" href="#">
+            <button onclick="trocarPagina('buscar_med')">
               <i class="fa-solid fa-magnifying-glass"></i> Buscar Médicos
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('perfil')" href="#">
+            <button onclick="trocarPagina('perfil')">
               <i class="fa-regular fa-user"></i> Perfil
             </button>
           </li>
           <li class="divisor"></li>
           <li>
-            <button onclick="sair()" href="pagina_inicial.html">
+            <button onclick="sair()">
               <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
             </button>
           </li>
@@ -429,7 +417,7 @@ const codigos_html = {
           <p>Busque Médicos para agendar consultas</p>
         </div>
 
-        <div class="perfil_usuario">
+        <div onclick="trocarPagina('perfil')" class="perfil_usuario">
           <span class="avatar">M</span>
           <div>
             <strong>Miguel Silva</strong>
@@ -444,7 +432,7 @@ const codigos_html = {
           <div class="input_busca">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input
-              class="bucar_medico_input"
+              class="buscar_medico_input"
               type="text"
               placeholder="Buscar médico..."
             />
@@ -670,7 +658,6 @@ const codigos_html = {
               <div class="checkbox">
                 <input type="checkbox" id="centro_especialidades" /><label
                   for="centro_especialidades"
-                /><label for="centro_especialidades"
                   >Centro de Especialidades Médicas</label
                 >
               </div>
@@ -1015,40 +1002,37 @@ const codigos_html = {
           </div>
         </div>
       </section>
-    </main>
-
-    <script src="../scripts/paineis.js"></script>
-    <script src="../scripts/busca_medico.js"></script>`,
+    </main>`,
   perfil: `    <aside class="barra_lateral">
         <h1>saic</h1>
         <nav>
             <ul>
                 <li>
-                    <button href="#"><i class="fa-solid fa-house"></i> Início</button>
+                    <button onclick="trocarPagina('inicio')"><i class="fa-solid fa-house"></i> Início</button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('consultas_marc')" href="painel_paciente2.html">
+                    <button onclick="trocarPagina('consultas_marc')">
                         <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
                     </button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('historico_cons')" href="#">
+                    <button onclick="trocarPagina('historico_cons')">
                         <i class="fa-regular fa-clock"></i> Histórico de Consultas
                     </button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('buscar_med')" href="#">
+                    <button onclick="trocarPagina('buscar_med')">
                         <i class="fa-solid fa-magnifying-glass"></i> Buscar Médicos
                     </button>
                 </li>
                 <li class="ativo">
-                    <button onclick="trocarPagina('perfil')" href="#">
+                    <button onclick="trocarPagina('perfil')">
                         <i class="fa-regular fa-user"></i> Perfil
                     </button>
                 </li>
                 <li class="divisor"></li>
                 <li>
-                    <button onclick="sair()" href="pagina_inicial.html">
+                    <button onclick="sair()">
                         <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
                     </button>
                 </li>
@@ -1066,7 +1050,7 @@ const codigos_html = {
 
         <section class="cartao">
             <form>
-                <div class="perfil_usuario">
+                <div class="perfil_formulario">
                     <section class="informacoes_principais">
                         <h2 id="informacoes_principais">Informações Principais</h2>
 
@@ -1109,26 +1093,13 @@ const codigos_html = {
                     </section>
                 </div>
 
-                <button type="submit" class="salvar_alt_button">
+                <button type="button" class="salvar_alt_button">
                     Salvar Alterações
                 </button>
             </form>
         </section>
-        <script src="../scripts/paineis.js"></script>
     </main>`
 };
-
-function carregarScripts() {
-  document.querySelectorAll("body script").forEach((scriptAntigo) => {
-    const novoScript = document.createElement("script");
-
-    novoScript.src = scriptAntigo.src;
-    novoScript.type = scriptAntigo.type;
-
-    document.body.appendChild(novoScript);
-    scriptAntigo.remove();
-  });
-}
 
 function trocarPagina(destino) {
   if (destino === "inicio") {

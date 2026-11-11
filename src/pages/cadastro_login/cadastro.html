@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@
         <input minlength="2" maxlength="100" class="input-texto" type="text" name="nome" id="input_nome"
             placeholder="Insira seu nome completo aqui" required>
 
-        <label for="input_cpf" class="input_cpf">CPF:</label>
+        <label for="input_cpf" class="input_label">CPF:</label>
         <input minlength="11" maxlength="11" class="input-texto" type="text" name="cpf" id="input_cpf"
             placeholder="Insira seu cpf aqui" required>
 
@@ -51,6 +51,10 @@
         document.querySelector(".botao_entrar").addEventListener("click", function (event) {
             event.preventDefault();
             window.location.href = "login.html";
+        });
+        document.querySelector(".botao_criar").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "cadastro.html";
         });
         document.querySelector("#logo").addEventListener("click", function (event) {
             event.preventDefault();

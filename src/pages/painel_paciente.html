@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt_BR">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,8 +9,7 @@
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -22,34 +21,33 @@
       <nav>
         <ul>
           <li class="ativo">
-            <button href="#"><i class="fa-solid fa-house"></i> Início</button>
+            <button onclick="trocarPagina('inicio')"><i class="fa-solid fa-house"></i> Início</button>
           </li>
           <li>
             <button
               onclick="trocarPagina('consultas_marc')"
-              href="painel_paciente2.html"
             >
               <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('historico_cons')" href="#">
+            <button onclick="trocarPagina('historico_cons')">
               <i class="fa-regular fa-clock"></i> Histórico de Consultas
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('buscar_med')" href="#">
+            <button onclick="trocarPagina('buscar_med')">
               <i class="fa-solid fa-magnifying-glass"></i> Buscar Médicos
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('perfil')" href="#">
+            <button onclick="trocarPagina('perfil')">
               <i class="fa-regular fa-user"></i> Perfil
             </button>
           </li>
           <li class="divisor"></li>
           <li>
-            <button onclick="sair()" href="pagina_inicial.html">
+            <button onclick="sair()">
               <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
             </button>
           </li>
@@ -109,7 +107,7 @@
           <section>
             <div class="titulo_seccao">
               <h2>Consultas Marcadas</h2>
-              <button onclick="trocarPagina('consultas_marc')" class="link_button" href="#">Ver todas</button>
+              <button onclick="trocarPagina('consultas_marc')" class="link_button">Ver todas</button>
             </div>
 
             <div class="lista_consultas">

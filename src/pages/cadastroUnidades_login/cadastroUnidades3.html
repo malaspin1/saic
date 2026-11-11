@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8" />
@@ -23,6 +23,14 @@
 
     <form id="formulario_cadastro" class="formulario">
         <h2 class="titulo_form">Cadastro</h2>
+
+        <label for="input_email" class="input_label">E-mail de acesso:</label>
+        <input minlength="5" maxlength="150" class="input-texto" type="email" name="email" id="input_email"
+            placeholder="Insira o e-mail usado para entrar" required />
+
+        <label for="input_senha" class="input_label">Defina sua senha:</label>
+        <input minlength="8" maxlength="50" class="input-texto" type="password" name="senha" id="input_senha"
+            placeholder="Crie uma senha com pelo menos 8 caracteres" required />
 
         <label for="input_complemento" class="input_label">Complemento:</label>
         <input minlength="2" maxlength="150" class="input-texto" type="text" name="complemento" id="input_complemento"

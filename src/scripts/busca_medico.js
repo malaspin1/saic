@@ -1,5 +1,5 @@
 function inicializarBuscaMedico() {
-  const campoBusca = document.querySelector(".bucar_medico_input");
+  const campoBusca = document.querySelector(".buscar_medico_input");
   const medicos = document.querySelectorAll(".medico");
 
   const seta = document.getElementById("filtro");
@@ -16,6 +16,8 @@ function inicializarBuscaMedico() {
 
   function normalizar(texto) {
     return texto
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
       .trim()
       .toLowerCase()
   }
@@ -89,7 +91,7 @@ function inicializarBuscaMedico() {
     } else {
       filtros.style.display = "block";
 
-      document.querySelector(".barra_lateral").style.minHeight = "200vh";
+      document.querySelector(".barra_lateral").style.minHeight = "100vh";
     }
   });
 

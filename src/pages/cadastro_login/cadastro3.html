@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
             <li><a class="list_links" href="../pagina_inicial.html">Inicio</a></li>
             <li><a class="list_links" href="../cadastroUnidades_login/loginUnidades.html">Saic - Unidades</a></li>
             <li><a class="list_links" href="../cadastroEspecialista_login/loginEspecialistas.html">Saic - Especialistas</a></li>
-            <li><a class="list_links" href="../pagina_inicial.htm">Sobre</a></li>
+        </ul>
         <div class="header_buttons_container">
             <button class="botao botao_entrar">Entrar</button>
             <button class="botao botao_criar">Criar conta</button>
@@ -47,11 +47,15 @@
         });
         document.getElementById("formulario_cadastro").addEventListener("submit", function (event) {
             event.preventDefault();
-            window.location.href = "../pagina_pos_login_paciente.html";
+            window.location.href = "../painel_paciente.html";
         });
         document.querySelector(".botao_entrar").addEventListener("click", function (event) {
             event.preventDefault();
             window.location.href = "login.html";
+        });
+        document.querySelector(".botao_criar").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "cadastro.html";
         });
 
         const inputs = document.querySelectorAll(".input_digitos");

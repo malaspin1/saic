@@ -34,7 +34,7 @@ function sair() {
   elemento.querySelector(".botao_sair_pop_up").addEventListener("click", () => {
     fecharPopup(elemento, overlay);
 
-    window.location.href = "pagina_inicial.html";
+    window.location.assign(new URL("pagina_inicial.html", window.location.href).href);
   });
 }
 

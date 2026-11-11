@@ -136,7 +136,7 @@ header ul li {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;  
+  gap: 20px;
 }
 
 .numero_card {
@@ -156,22 +156,22 @@ header ul li {
 
 .footer {
   box-sizing: border-box;
-  
+
   background-image: url(../img/final.png);
   background-size: contain;
-  
+
   height: 65vh;
-  
-  
+
+
   margin: auto;
   position: relative;
   display: flex;
-  
+
   justify-content: center;
   gap: 15px;
   align-items: center;
-  flex-direction: column; 
-  
+  flex-direction: column;
+
   font-size: 30px;
   color: white;
 
@@ -207,4 +207,40 @@ header ul li {
 
 .botao, #logo, .banner_botao {
   cursor: pointer;
-} 
+}
+
+.section_especialidades {
+  padding: 64px 8vw;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.especialidades_rotulo {
+  color: #35a77a;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section_especialidades h2 {
+  margin: 8px 0 28px;
+  color: #183b4a;
+  font-size: 28px;
+}
+
+.especialidades_lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.especialidades_lista span {
+  padding: 10px 18px;
+  border: 1px solid rgba(23, 107, 135, 0.2);
+  border-radius: 24px;
+  color: #176b87;
+  background: #f4fafc;
+  font-size: 14px;
+  font-weight: 600;
+}

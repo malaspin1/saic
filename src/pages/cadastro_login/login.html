@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -48,12 +48,16 @@
     <script>
         document.getElementById("formulario_login").addEventListener("submit", function (event) {
             event.preventDefault();
-            window.location.href = "../pagina_pos_login_paciente.html";
+            window.location.href = "../painel_paciente.html";
         });
 
         document.querySelector(".botao_criar").addEventListener("click", function (event) {
             event.preventDefault();
             window.location.href = "cadastro.html";
+        });
+        document.querySelector(".botao_entrar").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "login.html";
         });
         document.querySelector("#logo").addEventListener("click", function (event) {
             event.preventDefault();
