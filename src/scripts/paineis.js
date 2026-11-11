@@ -1,151 +1,169 @@
 const codigos_html = {
   inicio: `
-  <aside class="barra_lateral">
-    <h1>saic</h1>
-    <nav>
-      <ul>
-        <li class="ativo">
-          <button href="#"><i class="fa-solid fa-house"></i> Início</button>
-        </li>
-        <li>
-          <button onclick="trocarPagina('consultas_marc')" href="painel_paciente2.html"><i
-              class="fa-regular fa-calendar-check"></i> Consultas
-            Marcadas</button>
-        </li>
-        <li>
-          <button onclick="trocarPagina('historico_cons')" href="#"><i class="fa-regular fa-clock"></i> Histórico de
-            Consultas</button>
-        </li>
-        <li>
-          <button onclick="trocarPagina('buscar_med')" href="#"><i class="fa-solid fa-magnifying-glass"></i> Buscar
-            Médicos</button>
-        </li>
-        <li>
-          <button onclick="trocarPagina('perfil')" href="#"><i class="fa-regular fa-user"></i> Perfil</button>
-        </li>
-        <li class="divisor"></li>
-        <li>
-          <button onclick="sair()" href="pagina_inicial.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>
-            Sair</button>
-        </li>
-      </ul>
-    </nav>
-  </aside>
+    <aside class="barra_lateral">
+      <h1>saic</h1>
+      <nav>
+        <ul>
+          <li class="ativo">
+            <button href="#"><i class="fa-solid fa-house"></i> Início</button>
+          </li>
+          <li>
+            <button
+              onclick="trocarPagina('consultas_marc')"
+              href="painel_paciente2.html"
+            >
+              <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
+            </button>
+          </li>
+          <li>
+            <button onclick="trocarPagina('historico_cons')" href="#">
+              <i class="fa-regular fa-clock"></i> Histórico de Consultas
+            </button>
+          </li>
+          <li>
+            <button onclick="trocarPagina('buscar_med')" href="#">
+              <i class="fa-solid fa-magnifying-glass"></i> Buscar Médicos
+            </button>
+          </li>
+          <li>
+            <button onclick="trocarPagina('perfil')" href="#">
+              <i class="fa-regular fa-user"></i> Perfil
+            </button>
+          </li>
+          <li class="divisor"></li>
+          <li>
+            <button onclick="sair()" href="pagina_inicial.html">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </aside>
 
-  <main>
-    <header>
-      <div>
-        <h1>Olá, Miguel!</h1>
-        <p>Como podemos cuidar da sua saúde hoje?</p>
-        <div class="acoes_header">
-          <button class="botao botao_contorno">
-            <i class="fa-regular fa-clock"></i> Ver Histórico Completo
-          </button>
-          <button class="botao botao_fundo">
-            <i class="fa-solid fa-circle-plus"></i> Agendar Nova Consulta
-          </button>
-        </div>
-      </div>
-
-      <div class="perfil_usuario">
-        <span class="avatar">M</span>
+    <main>
+      <header>
         <div>
-          <strong>Miguel Silva</strong>
-          <small>Paciente</small>
+          <h1>Olá, Miguel!</h1>
+          <p>Como podemos cuidar da sua saúde hoje?</p>
+          <div class="acoes_header">
+            <button onclick="trocarPagina('historico_cons')" class="botao botao_contorno">
+              <i class="fa-regular fa-clock"></i> Ver Histórico Completo
+            </button>
+            <button onclick="trocarPagina('buscar_med')" class="botao botao_fundo">
+              <i class="fa-solid fa-circle-plus"></i> Agendar Nova Consulta
+            </button>
+          </div>
         </div>
+
+        <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+          <span class="avatar">M</span>
+          <div>
+            <strong>Miguel Silva</strong>
+            <small>Paciente</small>
+          </div>
+        </div>
+      </header>
+
+      <div class="grid_painel">
+        <div class="coluna_principal">
+          <section class="cartao">
+            <span class="etiqueta_verde">PRÓXIMA CONSULTA</span>
+
+            <div class="info_pessoa">
+              <div class="icone_avatar"><i class="fa-regular fa-user"></i></div>
+              <div>
+                <h2 class="nome">Dr. Ricardo Almeida</h2>
+                <p class="especialidade"><span class="ponto_verde"></span> Cardiologia • CRM 12345</p>
+              </div>
+            </div>
+
+            <div class="rodape_cartao">
+              <div class="data_hora">
+                <span class="data"
+                  ><i class="fa-regular fa-calendar"></i> 15 de Setembro,
+                  2026</span
+                >
+                <span class="hora"><i class="fa-regular fa-clock"></i> 14:30</span>
+              </div>
+              <button onclick="cancelarConsulta(this, 'cartao')" class="botao_cancelar">Cancelar</button>
+            </div>
+          </section>
+
+          <section>
+            <div class="titulo_seccao">
+              <h2>Consultas Marcadas</h2>
+              <button onclick="trocarPagina('consultas_marc')" class="link_button" href="#">Ver todas</button>
+            </div>
+
+            <div class="lista_consultas">
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm">
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                  <div>
+                    <h3 class="nome">Dra. Ana Costa</h3>
+                    <p class="especialidade">Dermatologia</p>
+                  </div>
+                </div>
+                <span class="data"
+                  ><i class="fa-regular fa-calendar"></i> 20 Set, 10:00</span
+                >
+                <button onclick="cancelarConsulta(this, 'lista')" class="botao_cancelar">Cancelar</button>
+              </div>
+
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm">
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                  <div>
+                    <h3 class="nome">Dr. Paulo Santos</h3>
+                    <p class="especialidade">Ortopedia</p>
+                  </div>
+                </div>
+                <span class="data"
+                  ><i class="fa-regular fa-calendar"></i> 05 Out, 09:25</span
+                >
+                <button onclick="cancelarConsulta(this, 'lista')" class="botao_cancelar">Cancelar</button>
+              </div>
+
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm">
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                  <div>
+                    <h3 class="nome">Dr. João T.</h3>
+                    <p class="especialidade">Oftalmologista</p>
+                  </div>
+                </div>
+                <span class="data"
+                  ><i class="fa-regular fa-calendar"></i> 15 Out, 14:30</span
+                >
+                <button onclick="cancelarConsulta(this, 'lista')" class="botao_cancelar">Cancelar</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside>
+          <section class="cartao cartao_historico">
+            <div class="titulo">
+              <i class="fa-regular fa-clock"></i>
+              <h3>Histórico de Consultas</h3>
+            </div>
+            <span class="numero">08</span>
+            <p>Consultas realizadas nos últimos 6 meses</p>
+            <button onclick="trocarPagina('historico_cons')" class="botao_detalhes">Ver detalhes</button>
+          </section>
+        </aside>
       </div>
-    </header>
+    </main>
 
-    <div class="grid_painel">
-      <div class="coluna_principal">
-        <section class="cartao">
-          <span class="etiqueta_verde">PRÓXIMA CONSULTA</span>
-
-          <div class="info_pessoa">
-            <div class="icone_avatar"><i class="fa-regular fa-user"></i></div>
-            <div>
-              <h2>Dr. Ricardo Almeida</h2>
-              <p><span class="ponto_verde"></span> Cardiologia • CRM 12345</p>
-            </div>
-          </div>
-
-          <div class="rodape_cartao">
-            <div class="data_hora">
-              <span><i class="fa-regular fa-calendar"></i> 15 de Setembro,
-                2026</span>
-              <span><i class="fa-regular fa-clock"></i> 14:30</span>
-            </div>
-            <button class="botao_cancelar">Cancelar</button>
-          </div>
-        </section>
-
-        <section>
-          <div class="titulo_seccao">
-            <h2>Consultas Marcadas</h2>
-            <a href="#">Ver todas</a>
-          </div>
-
-          <div class="lista_consultas">
-            <div class="cartao item_consulta">
-              <div class="info_pessoa">
-                <div class="icone_avatar sm">
-                  <i class="fa-regular fa-user"></i>
-                </div>
-                <div>
-                  <h3>Dra. Ana Costa</h3>
-                  <p>Dermatologia</p>
-                </div>
-              </div>
-              <span class="data"><i class="fa-regular fa-calendar"></i> 20 Set, 10:00</span>
-              <button class="botao_cancelar">Cancelar</button>
-            </div>
-
-            <div class="cartao item_consulta">
-              <div class="info_pessoa">
-                <div class="icone_avatar sm">
-                  <i class="fa-regular fa-user"></i>
-                </div>
-                <div>
-                  <h3>Dr. Paulo Santos</h3>
-                  <p>Ortopedia</p>
-                </div>
-              </div>
-              <span class="data"><i class="fa-regular fa-calendar"></i> 05 Out, 09:25</span>
-              <button class="botao_cancelar">Cancelar</button>
-            </div>
-
-            <div class="cartao item_consulta">
-              <div class="info_pessoa">
-                <div class="icone_avatar sm">
-                  <i class="fa-regular fa-user"></i>
-                </div>
-                <div>
-                  <h3>Dr. João T.</h3>
-                  <p>Oftalmologista</p>
-                </div>
-              </div>
-              <span class="data"><i class="fa-regular fa-calendar"></i> 15 Out, 14:30</span>
-              <button class="botao_cancelar">Cancelar</button>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <aside>
-        <section class="cartao cartao_historico">
-          <div class="titulo">
-            <i class="fa-regular fa-clock"></i>
-            <h3>Histórico de Consultas</h3>
-          </div>
-          <span class="numero">08</span>
-          <p>Consultas realizadas nos últimos 6 meses</p>
-          <button class="botao_detalhes">Ver detalhes</button>
-        </section>
-      </aside>
-    </div>
-  </main>
-
-  <script src="../../scripts/paineis.js"></script>`,
+    <script src="../scripts/paineis.js"></script>
+    <script src="../scripts/busca_medico.js"></script>
+    <script src="../scripts/painel_paciente.js"></script>`,
   consultas_marc: `
 
     <aside class="barra_lateral">
@@ -1069,12 +1087,6 @@ const codigos_html = {
                         <div>
                             <label for="input_datanasc" class="input_label">Data de Nascimento:</label>
                             <input class="input-texto" type="date" name="datanasc" id="input_datanasc" required>
-                        </div>
-
-                        <div>
-                            <label for="input_cpf" class="input_cpf">CPF:</label>
-                            <input minlength="11" maxlength="11" class="input-texto" type="text" name="cpf"
-                                id="input_cpf" placeholder="Insira seu cpf aqui" required value="AAAAAAAAAAA">
                         </div>
                     </section>
 

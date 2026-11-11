@@ -22,7 +22,6 @@ body {
   flex-shrink: 0;
 }
 
-
 .barra_lateral h1 {
   font-size: 36px;
   font-weight: 800;
@@ -110,6 +109,7 @@ header p {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 
 .perfil_usuario .avatar {
@@ -323,7 +323,11 @@ header p {
   color: #0f172a;
 }
 
-.titulo_seccao a {
+.titulo_seccao a,
+.link_button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   color: #0284c7;
   text-decoration: none;
   font-size: 12px;
@@ -649,4 +653,117 @@ header p {
   font-weight: 700;
   border: none;
   cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+
+  backdrop-filter: blur(3px);
+
+  z-index: 10;
+}
+
+.pop_up_sair {
+  z-index: 11;
+
+  width: 35vw;
+  height: 30vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  border: 3px solid rgba(128, 128, 128, 0.495);
+  border-radius: 20px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.pop_up_sair h3 {
+  font-size: 1.6rem;
+}
+
+.pop_up_sair p {
+  color: rgb(96, 96, 96);
+  font-size: 0.7rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.botao_voltar_pop_up, .botao_voltar_pop_up_cancelar {
+  background-color: #299b75;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.botao_voltar_pop_up:hover, .botao_voltar_pop_up_cancelar:hover {
+  background-color: #31ac83;
+}
+
+.botao_sair_pop_up, .botao_conf_cancelamento_pop_up_cancelar {
+  background-color: transparent;
+  padding: 5px 15px;
+  border: 1px solid #991b1b;
+  border-radius: 10px;
+  color: #991b1b;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.botao_sair_pop_up:hover, .botao_conf_cancelamento_pop_up_cancelar:hover {
+  background-color: #991b1b1a;
+}
+
+.pop_up_cancelar_consulta {
+  z-index: 11;
+
+  width: 35vw;
+  height: 40vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  border: 3px solid rgba(128, 128, 128, 0.495);
+  border-radius: 20px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.infos_consulta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.data_pop_up {
+  font-size: 0.9rem;
 }

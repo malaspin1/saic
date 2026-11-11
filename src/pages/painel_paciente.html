@@ -63,16 +63,16 @@
           <h1>Olá, Miguel!</h1>
           <p>Como podemos cuidar da sua saúde hoje?</p>
           <div class="acoes_header">
-            <button class="botao botao_contorno">
+            <button onclick="trocarPagina('historico_cons')" class="botao botao_contorno">
               <i class="fa-regular fa-clock"></i> Ver Histórico Completo
             </button>
-            <button class="botao botao_fundo">
+            <button onclick="trocarPagina('buscar_med')" class="botao botao_fundo">
               <i class="fa-solid fa-circle-plus"></i> Agendar Nova Consulta
             </button>
           </div>
         </div>
 
-        <div class="perfil_usuario">
+        <div onclick="trocarPagina('perfil')" class="perfil_usuario">
           <span class="avatar">M</span>
           <div>
             <strong>Miguel Silva</strong>
@@ -89,27 +89,27 @@
             <div class="info_pessoa">
               <div class="icone_avatar"><i class="fa-regular fa-user"></i></div>
               <div>
-                <h2>Dr. Ricardo Almeida</h2>
-                <p><span class="ponto_verde"></span> Cardiologia • CRM 12345</p>
+                <h2 class="nome">Dr. Ricardo Almeida</h2>
+                <p class="especialidade"><span class="ponto_verde"></span> Cardiologia • CRM 12345</p>
               </div>
             </div>
 
             <div class="rodape_cartao">
               <div class="data_hora">
-                <span
+                <span class="data"
                   ><i class="fa-regular fa-calendar"></i> 15 de Setembro,
                   2026</span
                 >
-                <span><i class="fa-regular fa-clock"></i> 14:30</span>
+                <span class="hora"><i class="fa-regular fa-clock"></i> 14:30</span>
               </div>
-              <button class="botao_cancelar">Cancelar</button>
+              <button onclick="cancelarConsulta(this, 'cartao')" class="botao_cancelar">Cancelar</button>
             </div>
           </section>
 
           <section>
             <div class="titulo_seccao">
               <h2>Consultas Marcadas</h2>
-              <a href="#">Ver todas</a>
+              <button onclick="trocarPagina('consultas_marc')" class="link_button" href="#">Ver todas</button>
             </div>
 
             <div class="lista_consultas">
@@ -119,14 +119,14 @@
                     <i class="fa-regular fa-user"></i>
                   </div>
                   <div>
-                    <h3>Dra. Ana Costa</h3>
-                    <p>Dermatologia</p>
+                    <h3 class="nome">Dra. Ana Costa</h3>
+                    <p class="especialidade">Dermatologia</p>
                   </div>
                 </div>
                 <span class="data"
                   ><i class="fa-regular fa-calendar"></i> 20 Set, 10:00</span
                 >
-                <button class="botao_cancelar">Cancelar</button>
+                <button onclick="cancelarConsulta(this, 'lista')" class="botao_cancelar">Cancelar</button>
               </div>
 
               <div class="cartao item_consulta">
@@ -135,14 +135,14 @@
                     <i class="fa-regular fa-user"></i>
                   </div>
                   <div>
-                    <h3>Dr. Paulo Santos</h3>
-                    <p>Ortopedia</p>
+                    <h3 class="nome">Dr. Paulo Santos</h3>
+                    <p class="especialidade">Ortopedia</p>
                   </div>
                 </div>
                 <span class="data"
                   ><i class="fa-regular fa-calendar"></i> 05 Out, 09:25</span
                 >
-                <button class="botao_cancelar">Cancelar</button>
+                <button onclick="cancelarConsulta(this, 'lista')" class="botao_cancelar">Cancelar</button>
               </div>
 
               <div class="cartao item_consulta">
@@ -151,14 +151,14 @@
                     <i class="fa-regular fa-user"></i>
                   </div>
                   <div>
-                    <h3>Dr. João T.</h3>
-                    <p>Oftalmologista</p>
+                    <h3 class="nome">Dr. João T.</h3>
+                    <p class="especialidade">Oftalmologista</p>
                   </div>
                 </div>
                 <span class="data"
                   ><i class="fa-regular fa-calendar"></i> 15 Out, 14:30</span
                 >
-                <button class="botao_cancelar">Cancelar</button>
+                <button onclick="cancelarConsulta(this, 'lista')" class="botao_cancelar">Cancelar</button>
               </div>
             </div>
           </section>
@@ -172,7 +172,7 @@
             </div>
             <span class="numero">08</span>
             <p>Consultas realizadas nos últimos 6 meses</p>
-            <button class="botao_detalhes">Ver detalhes</button>
+            <button onclick="trocarPagina('historico_cons')" class="botao_detalhes">Ver detalhes</button>
           </section>
         </aside>
       </div>
@@ -180,5 +180,6 @@
 
     <script src="../scripts/paineis.js"></script>
     <script src="../scripts/busca_medico.js"></script>
+    <script src="../scripts/painel_paciente.js"></script>
   </body>
 </html>
