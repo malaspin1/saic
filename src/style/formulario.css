@@ -104,6 +104,14 @@ header ul li {
   padding-bottom: 20px;
 }
 
+.checkbox_container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
 .checkBox {
   cursor: pointer;
   width: 10px;
