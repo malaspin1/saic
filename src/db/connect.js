@@ -4,10 +4,10 @@ import mysql from 'mysql2';
 
 const pool = mysql.createPool({
     connectionLimit: 10,
-    host:"10.89.240.60",
+    host:"10.89.240.8",
     user:"aluno",
     password:"senai@604",
-    database:"saic_sprint"
+    database:"saic"
 })
 
 export default pool;
