@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAIC - Painel do Paciente</title>
+  <link rel="stylesheet" href="../style/paineis.css" />
+  <link rel="icon" href="../img/saic.png?v=2" type="image/png" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <aside class="barra_lateral">
+    <h1>saic</h1>
+    <nav>
+      <ul>
+        <li class="ativo">
+          <button onclick="trocarPagina('especialista','inicio')"><i class="fa-solid fa-house"></i> Início</button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','consultas_marc')">
+            <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','historico_cons')">
+            <i class="fa-regular fa-clock"></i> Histórico de Consultas
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','unidades')">
+            <i class="fa-solid fa-house"></i> Unidades
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','perfil')">
+            <i class="fa-regular fa-user"></i> Perfil
+          </button>
+        </li>
+        <li class="divisor"></li>
+        <li>
+          <button onclick="sair()">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <h1>Olá, João!</h1>
+        <p>Aqui está sua agenda!</p>
+        <div class="acoes_header">
+          <button onclick="trocarPagina('especialista','historico_cons')" class="botao botao_contorno">
+            <i class="fa-regular fa-clock"></i> Ver Histórico Completo
+          </button>
+        </div>
+      </div>
+
+      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+        <span class="avatar">M</span>
+        <div>
+          <strong>Dr. João T.</strong>
+          <small>Médico</small>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid_painel">
+      <div class="coluna_principal">
+        <section class="cartao">
+          <span class="etiqueta_verde">PRÓXIMA CONSULTA</span>
+
+          <div class="info_pessoa">
+            <div class="icone_avatar"><i class="fa-regular fa-user"></i></div>
+            <div>
+              <h2 class="nome">Miguel Silva</h2>
+              <p class="especialidade"><span class="ponto_verde"></span> Consulta • Clínica Geral</p>
+            </div>
+          </div>
+
+          <div class="rodape_cartao">
+            <div class="data_hora">
+              <span class="data"><i class="fa-regular fa-calendar"></i> 15 de Setembro,
+                2026</span>
+              <span class="hora"><i class="fa-regular fa-clock"></i> 14:30</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="titulo_seccao">
+            <h2>Consultas Marcadas</h2>
+            <button onclick="trocarPagina('especialista','consultas_marc')" class="link_button">Ver todas</button>
+          </div>
+
+          <div class="lista_consultas">
+            <div class="cartao item_consulta">
+              <div class="info_pessoa">
+                <div class="icone_avatar sm">
+                  <i class="fa-regular fa-user"></i>
+                </div>
+                <div>
+                  <h3 class="nome">Vitor Malaspini</h3>
+                  <p class="especialidade">Oftalmo</p>
+                </div>
+              </div>
+              <span class="data"><i class="fa-regular fa-calendar"></i> 20 Set, 18:00</span>
+            </div>
+
+            <div class="cartao item_consulta">
+              <div class="info_pessoa">
+                <div class="icone_avatar sm">
+                  <i class="fa-regular fa-user"></i>
+                </div>
+                <div>
+                  <h3 class="nome">Gustavo Pimenta</h3>
+                  <p class="especialidade">Clínica Geral</p>
+                </div>
+              </div>
+              <span class="data"><i class="fa-regular fa-calendar"></i> 14 Out, 09:40</span>
+            </div>
+
+            <div class="cartao item_consulta">
+              <div class="info_pessoa">
+                <div class="icone_avatar sm">
+                  <i class="fa-regular fa-user"></i>
+                </div>
+                <div>
+                  <h3 class="nome">Otávio Sá</h3>
+                  <p class="especialidade">Clínica Geral</p>
+                </div>
+              </div>
+              <span class="data"><i class="fa-regular fa-calendar"></i> 19 Out, 12:30</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <section class="cartao cartao_historico">
+          <div class="titulo">
+            <i class="fa-regular fa-clock"></i>
+            <h3>Histórico de Consultas</h3>
+          </div>
+          <span class="numero">37</span>
+          <p>Consultas realizadas nos últimos 6 meses</p>
+          <button onclick="trocarPagina('historico_cons')" class="botao_detalhes">Ver detalhes</button>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <script src="../scripts/paineis.js"></script>
+  <script src="../scripts/painel_especialistas.js"></script>
+</body>
+
+</html>

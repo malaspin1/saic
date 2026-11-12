@@ -464,12 +464,12 @@ header p {
   border-radius: 10px;
 }
 
-.buscar_medico_input {
+.buscar_medico_input, .buscar_unidade_input {
   background-color: transparent;
   border: none;
 }
 
-.buscar_medico_input:focus {
+.buscar_medico_input:focus, .buscar_unidade_input:focus {
   outline: none;
   width: 90%;
 }
@@ -482,16 +482,16 @@ header p {
   cursor: pointer;
 }
 
-.medicos {
+.medicos, .unidades {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.medico {
+.medico, .unidade {
   box-sizing: border-box;
-  display: 300px;
+  width: 300px;
   height: 120px;
   background-color: white;
   display: flex;
@@ -500,11 +500,6 @@ header p {
   justify-content: space-evenly;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.144);
-}
-
-.infos_medico {
-  display: flex;
-  justify-content: center;
 }
 
 .agendar_button {
@@ -897,23 +892,23 @@ header p {
   background-color: #31ac83;
 }
 
-@media (max-width: 600px) {
-  .pop_up_detalhes_consulta,
-  .pop_up_agendar_consulta,
-  .pop_up_salvar_alteracoes,
-  .pop_up_resultado,
-  .pop_up_cancelar_consulta,
-  .pop_up_sair {
-    width: calc(100vw - 32px);
-    height: auto;
-    min-height: 0;
-    max-height: 90vh;
-    padding: 18px;
-  }
-
-  .pop_up_cancelar_consulta .infos_consulta {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+.infos_unidade {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-evenly;
 }
 
+.botao_solicitar_entrada {
+  background-color: #299b75;
+  color: white;
+  font-weight: 700;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.botao_solicitar_entrada:hover {
+  background-color: #34b88c;
+}

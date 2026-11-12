@@ -1,31 +1,32 @@
 const codigos_html = {
-  inicio: `
+  paciente: {
+    inicio: `
     <aside class="barra_lateral">
       <h1>saic</h1>
       <nav>
         <ul>
           <li class="ativo">
-            <button onclick="trocarPagina('inicio')"><i class="fa-solid fa-house"></i> Início</button>
+            <button onclick="trocarPagina('paciente','inicio')"><i class="fa-solid fa-house"></i> Início</button>
           </li>
           <li>
             <button
-              onclick="trocarPagina('consultas_marc')"
+              onclick="trocarPagina('paciente','consultas_marc')"
             >
               <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('historico_cons')">
+            <button onclick="trocarPagina('paciente','historico_cons')">
               <i class="fa-regular fa-clock"></i> Histórico de Consultas
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('buscar_med')">
+            <button onclick="trocarPagina('paciente','buscar_med')">
               <i class="fa-solid fa-magnifying-glass"></i> Buscar Médicos
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('perfil')">
+            <button onclick="trocarPagina('paciente','perfil')">
               <i class="fa-regular fa-user"></i> Perfil
             </button>
           </li>
@@ -45,16 +46,16 @@ const codigos_html = {
           <h1>Olá, Miguel!</h1>
           <p>Como podemos cuidar da sua saúde hoje?</p>
           <div class="acoes_header">
-            <button onclick="trocarPagina('historico_cons')" class="botao botao_contorno">
+            <button onclick="trocarPagina('paciente','historico_cons')" class="botao botao_contorno">
               <i class="fa-regular fa-clock"></i> Ver Histórico Completo
             </button>
-            <button onclick="trocarPagina('buscar_med')" class="botao botao_fundo">
+            <button onclick="trocarPagina('paciente','buscar_med')" class="botao botao_fundo">
               <i class="fa-solid fa-circle-plus"></i> Agendar Nova Consulta
             </button>
           </div>
         </div>
 
-        <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+        <div onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
           <span class="avatar">M</span>
           <div>
             <strong>Miguel Silva</strong>
@@ -91,7 +92,7 @@ const codigos_html = {
           <section>
             <div class="titulo_seccao">
               <h2>Consultas Marcadas</h2>
-              <button onclick="trocarPagina('consultas_marc')" class="link_button">Ver todas</button>
+              <button onclick="trocarPagina('paciente','consultas_marc')" class="link_button">Ver todas</button>
             </div>
 
             <div class="lista_consultas">
@@ -154,19 +155,19 @@ const codigos_html = {
             </div>
             <span class="numero">08</span>
             <p>Consultas realizadas nos últimos 6 meses</p>
-            <button onclick="trocarPagina('historico_cons')" class="botao_detalhes">Ver detalhes</button>
+            <button onclick="trocarPagina('paciente','historico_cons')" class="botao_detalhes">Ver detalhes</button>
           </section>
         </aside>
       </div>
     </main>`,
-  consultas_marc: `
+    consultas_marc: `
 
     <aside class="barra_lateral">
         <h1>saic</h1>
         <nav>
             <ul>
                 <li>
-                    <button onclick="trocarPagina('inicio')"><i class="fa-solid fa-house"></i> Início</button>
+                    <button onclick="trocarPagina('paciente','inicio')"><i class="fa-solid fa-house"></i> Início</button>
                 </li>
                 <li  class="ativo">
                     <button><i
@@ -174,17 +175,17 @@ const codigos_html = {
                         Marcadas</button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('historico_cons')"><i class="fa-regular fa-clock"></i>
+                    <button onclick="trocarPagina('paciente','historico_cons')"><i class="fa-regular fa-clock"></i>
                         Histórico de
                         Consultas</button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('buscar_med')"><i class="fa-solid fa-magnifying-glass"></i>
+                    <button onclick="trocarPagina('paciente','buscar_med')"><i class="fa-solid fa-magnifying-glass"></i>
                         Buscar
                         Médicos</button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('perfil')"><i class="fa-regular fa-user"></i> Perfil</button>
+                    <button onclick="trocarPagina('paciente','perfil')"><i class="fa-regular fa-user"></i> Perfil</button>
                 </li>
                 <li class="divisor"></li>
                 <li>
@@ -203,7 +204,7 @@ const codigos_html = {
                 <p>Essas são suas consultas marcadas!</p>
             </div>
 
-            <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+            <div onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
                 <span class="avatar">M</span>
                 <div>
                     <strong>Miguel Silva</strong>
@@ -249,16 +250,16 @@ const codigos_html = {
             </div>
         </section>
     </main>`,
-  historico_cons: `
+    historico_cons: `
   <aside class="barra_lateral">
     <h1>saic</h1>
     <nav>
       <ul>
         <li>
-          <button onclick="trocarPagina('inicio')"><i class="fa-solid fa-house"></i> Início</button>
+          <button onclick="trocarPagina('paciente','inicio')"><i class="fa-solid fa-house"></i> Início</button>
         </li>
         <li>
-          <button onclick="trocarPagina('consultas_marc')"><i
+          <button onclick="trocarPagina('paciente','consultas_marc')"><i
               class="fa-regular fa-calendar-check"></i> Consultas
             Marcadas</button>
         </li>
@@ -267,11 +268,11 @@ const codigos_html = {
             Consultas</button>
         </li>
         <li>
-          <button onclick="trocarPagina('buscar_med')"><i class="fa-solid fa-magnifying-glass"></i> Buscar
+          <button onclick="trocarPagina('paciente','buscar_med')"><i class="fa-solid fa-magnifying-glass"></i> Buscar
             Médicos</button>
         </li>
         <li>
-          <button onclick="trocarPagina('perfil')"><i class="fa-regular fa-user"></i> Perfil</button>
+          <button onclick="trocarPagina('paciente','perfil')"><i class="fa-regular fa-user"></i> Perfil</button>
         </li>
         <li class="divisor"></li>
         <li>
@@ -289,7 +290,7 @@ const codigos_html = {
         <p>Esse é seu histórico de consultas</p>
       </div>
 
-      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+      <div onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
         <span class="avatar">M</span>
         <div>
           <strong>Miguel Silva</strong>
@@ -368,35 +369,35 @@ const codigos_html = {
 
 
   </main>`,
-  busca_medico: `
+    busca_medico: `
     <aside class="barra_lateral">
       <h1>saic</h1>
       <nav>
         <ul>
           <li>
-            <button onclick="trocarPagina('inicio')">
+            <button onclick="trocarPagina('paciente','paciente','inicio')">
               <i class="fa-solid fa-house"></i> Início
             </button>
           </li>
           <li>
             <button
-              onclick="trocarPagina('consultas_marc')"
+              onclick="trocarPagina('paciente','consultas_marc')"
             >
               <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('historico_cons')">
+            <button onclick="trocarPagina('paciente','historico_cons')">
               <i class="fa-regular fa-clock"></i> Histórico de Consultas
             </button>
           </li>
           <li class="ativo">
-            <button onclick="trocarPagina('buscar_med')">
+            <button onclick="trocarPagina('paciente','buscar_med')">
               <i class="fa-solid fa-magnifying-glass"></i> Buscar Médicos
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('perfil')">
+            <button onclick="trocarPagina('paciente','perfil')">
               <i class="fa-regular fa-user"></i> Perfil
             </button>
           </li>
@@ -417,7 +418,7 @@ const codigos_html = {
           <p>Busque Médicos para agendar consultas</p>
         </div>
 
-        <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+        <div onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
           <span class="avatar">M</span>
           <div>
             <strong>Miguel Silva</strong>
@@ -1003,30 +1004,30 @@ const codigos_html = {
         </div>
       </section>
     </main>`,
-  perfil: `    <aside class="barra_lateral">
+    perfil: `    <aside class="barra_lateral">
         <h1>saic</h1>
         <nav>
             <ul>
                 <li>
-                    <button onclick="trocarPagina('inicio')"><i class="fa-solid fa-house"></i> Início</button>
+                    <button onclick="trocarPagina('paciente','inicio')"><i class="fa-solid fa-house"></i> Início</button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('consultas_marc')">
+                    <button onclick="trocarPagina('paciente','consultas_marc')">
                         <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
                     </button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('historico_cons')">
+                    <button onclick="trocarPagina('paciente','historico_cons')">
                         <i class="fa-regular fa-clock"></i> Histórico de Consultas
                     </button>
                 </li>
                 <li>
-                    <button onclick="trocarPagina('buscar_med')">
+                    <button onclick="trocarPagina('paciente','buscar_med')">
                         <i class="fa-solid fa-magnifying-glass"></i> Buscar Médicos
                     </button>
                 </li>
                 <li class="ativo">
-                    <button onclick="trocarPagina('perfil')">
+                    <button onclick="trocarPagina('paciente','perfil')">
                         <i class="fa-regular fa-user"></i> Perfil
                     </button>
                 </li>
@@ -1099,21 +1100,775 @@ const codigos_html = {
             </form>
         </section>
     </main>`
+  },
+  especialista: {
+    inicio: `
+    <aside class="barra_lateral">
+      <h1>saic</h1>
+      <nav>
+        <ul>
+          <li class="ativo">
+            <button onclick="trocarPagina('especialista','inicio')"><i class="fa-solid fa-house"></i> Início</button>
+          </li>
+          <li>
+            <button
+              onclick="trocarPagina('especialista','consultas_marc')"
+            >
+              <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
+            </button>
+          </li>
+          <li>
+            <button onclick="trocarPagina('especialista','historico_cons')">
+              <i class="fa-regular fa-clock"></i> Histórico de Consultas
+            </button>
+          </li>
+          <li>
+            <button onclick="trocarPagina('especialista','unidades')">
+              <i class="fa-solid fa-house"></i> Unidades
+            </button>
+          </li>
+          <li>
+            <button onclick="trocarPagina('especialista','perfil')">
+              <i class="fa-regular fa-user"></i> Perfil
+            </button>
+          </li>
+          <li class="divisor"></li>
+          <li>
+            <button onclick="sair()">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <header>
+        <div>
+          <h1>Olá, João!</h1>
+          <p>Aqui está sua agenda!</p>
+          <div class="acoes_header">
+            <button onclick="trocarPagina('especialista','historico_cons')" class="botao botao_contorno">
+              <i class="fa-regular fa-clock"></i> Ver Histórico Completo
+            </button>
+          </div>
+        </div>
+
+        <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+          <span class="avatar">M</span>
+          <div>
+            <strong>Dr. João T.</strong>
+            <small>Médico</small>
+          </div>
+        </div>
+      </header>
+
+      <div class="grid_painel">
+        <div class="coluna_principal">
+          <section class="cartao">
+            <span class="etiqueta_verde">PRÓXIMA CONSULTA</span>
+
+            <div class="info_pessoa">
+              <div class="icone_avatar"><i class="fa-regular fa-user"></i></div>
+              <div>
+                <h2 class="nome">Miguel Silva</h2>
+                <p class="especialidade"><span class="ponto_verde"></span> Consulta • Clínica Geral</p>
+              </div>
+            </div>
+
+            <div class="rodape_cartao">
+              <div class="data_hora">
+                <span class="data"
+                  ><i class="fa-regular fa-calendar"></i> 15 de Setembro,
+                  2026</span
+                >
+                <span class="hora"><i class="fa-regular fa-clock"></i> 14:30</span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="titulo_seccao">
+              <h2>Consultas Marcadas</h2>
+              <button onclick="trocarPagina('especialista','consultas_marc')" class="link_button">Ver todas</button>
+            </div>
+
+            <div class="lista_consultas">
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm">
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                  <div>
+                    <h3 class="nome">Vitor Malaspini</h3>
+                    <p class="especialidade">Oftalmo</p>
+                  </div>
+                </div>
+                <span class="data"
+                  ><i class="fa-regular fa-calendar"></i> 20 Set, 18:00</span
+                >
+              </div>
+
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm">
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                  <div>
+                    <h3 class="nome">Gustavo Pimenta</h3>
+                    <p class="especialidade">Clínica Geral</p>
+                  </div>
+                </div>
+                <span class="data"
+                  ><i class="fa-regular fa-calendar"></i> 14 Out, 09:40</span
+                >
+              </div>
+
+              <div class="cartao item_consulta">
+                <div class="info_pessoa">
+                  <div class="icone_avatar sm">
+                    <i class="fa-regular fa-user"></i>
+                  </div>
+                  <div>
+                    <h3 class="nome">Otávio Sá</h3>
+                    <p class="especialidade">Clínica Geral</p>
+                  </div>
+                </div>
+                <span class="data"
+                  ><i class="fa-regular fa-calendar"></i> 19 Out, 12:30</span
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside>
+          <section class="cartao cartao_historico">
+            <div class="titulo">
+              <i class="fa-regular fa-clock"></i>
+              <h3>Histórico de Consultas</h3>
+            </div>
+            <span class="numero">37</span>
+            <p>Consultas realizadas nos últimos 6 meses</p>
+            <button onclick="trocarPagina('historico_cons')" class="botao_detalhes">Ver detalhes</button>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <script src="../scripts/paineis.js"></script>
+    <script src="../scripts/painel_especialistas.js"></script>`,
+    consultas_marc: `
+  <aside class="barra_lateral">
+    <h1>saic</h1>
+    <nav>
+      <ul>
+        <li>
+          <button onclick="trocarPagina('especialista','inicio')"><i class="fa-solid fa-house"></i> Início</button>
+        </li>
+        <li class="ativo">
+          <button onclick="trocarPagina('especialista','consultas_marc')">
+            <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','historico_cons')">
+            <i class="fa-regular fa-clock"></i> Histórico de Consultas
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','unidades')">
+            <i class="fa-solid fa-house"></i> Unidades
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','perfil')">
+            <i class="fa-regular fa-user"></i> Perfil
+          </button>
+        </li>
+        <li class="divisor"></li>
+        <li>
+          <button onclick="sair()">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <h1>Olá, João!</h1>
+        <p>Aqui está sua agenda!</p>
+      </div>
+
+      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+        <span class="avatar">M</span>
+        <div>
+          <strong>Dr. João T.</strong>
+          <small>Médico</small>
+        </div>
+      </div>
+    </header>
+
+    <section class="consultas_marcadas">
+      <h2>Consultas Marcadas</h2>
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png">
+          <span>
+            <h4 class="nome">Miguel Silva</h4>
+            <p class="especialidade">Clínica Geral</p>
+          </span>
+        </div>
+        <div><span class="infos_consulta data"><i class="fa-regular fa-calendar"></i> 20 Set, 10:00</span></div>
+      </div>
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png">
+          <span>
+            <h4 class="nome">Vitor Malaspini</h4>
+            <p class="especialidade">Oftalmo</p>
+          </span>
+        </div>
+        <div><span class="infos_consulta data"><i class="fa-regular fa-calendar"></i> 05 Out, 09:25</span></div>
+      </div>
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png">
+          <span>
+            <h4 class="nome">Gustavo Pimenta</h4>
+            <p class="especialidade">Clínica Geral</p>
+          </span>
+        </div>
+        <div><span class="infos_consulta data"><i class="fa-regular fa-calendar"></i> 15 Out, 14:30</span></div>
+      </div>
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png">
+          <span>
+            <h4 class="nome">Otávio Sá</h4>
+            <p class="especialidade">Clínica Geral</p>
+          </span>
+        </div>
+        <div><span class="infos_consulta data"><i class="fa-regular fa-calendar"></i> 15 Out, 14:30</span></div>
+      </div>
+    </section>
+  </main>`,
+    historico_cons: `
+  <aside class="barra_lateral">
+    <h1>saic</h1>
+    <nav>
+      <ul>
+        <li>
+          <button onclick="trocarPagina('especialista','inicio')"><i class="fa-solid fa-house"></i> Início</button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','consultas_marc')">
+            <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
+          </button>
+        </li>
+        <li class="ativo">
+          <button onclick="trocarPagina('especialista','historico_cons')">
+            <i class="fa-regular fa-clock"></i> Histórico de Consultas
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','unidades')">
+            <i class="fa-solid fa-house"></i> Unidades
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','perfil')">
+            <i class="fa-regular fa-user"></i> Perfil
+          </button>
+        </li>
+        <li class="divisor"></li>
+        <li>
+          <button onclick="sair()">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <h1>Olá, João!</h1>
+        <p>Aqui está sua agenda!</p>
+        <div class="acoes_header">
+        </div>
+      </div>
+
+      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+        <span class="avatar">M</span>
+        <div>
+          <strong>Dr. João T.</strong>
+          <small>Médico</small>
+        </div>
+      </div>
+    </header>
+
+    <section class="historico_consultas">
+      <h2>Histórico de Consultas</h2>
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png" alt="Foto do médico">
+          <span>
+            <h4>Roberto</h4>
+            <p>Clínica Geral</p>
+          </span>
+        </div>
+        <span class="infos_consulta">
+          <i class="fa-regular fa-calendar"></i> 02 Out 2026
+        </span>
+      </div>
+
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png" alt="Foto do médico">
+          <span>
+            <h4>Camila</h4>
+            <p>Oftalmologia</p>
+          </span>
+        </div>
+        <span class="infos_consulta">
+          <i class="fa-regular fa-calendar"></i> 18 Set 2026
+        </span>
+      </div>
+
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png" alt="Foto do médico">
+          <span>
+            <h4>Fernando</h4>
+            <p>Clínica Geral</p>
+          </span>
+        </div>
+        <span class="infos_consulta">
+          <i class="fa-regular fa-calendar"></i> 25 Set 2026
+        </span>
+      </div>
+
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png" alt="Foto do médico">
+          <span>
+            <h4>Juliana</h4>
+            <p>Oftalmologia</p>
+          </span>
+        </div>
+        <span class="infos_consulta">
+          <i class="fa-regular fa-calendar"></i> 11 Ago 2026
+        </span>
+      </div>
+
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png" alt="Foto do médico">
+          <span>
+            <h4>Ricardo</h4>
+            <p>Clínica Geral</p>
+          </span>
+        </div>
+        <span class="infos_consulta">
+          <i class="fa-regular fa-calendar"></i> 30 Set 2026
+        </span>
+      </div>
+
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png" alt="Foto do médico">
+          <span>
+            <h4>Patrícia</h4>
+            <p>Oftalmologia</p>
+          </span>
+        </div>
+        <span class="infos_consulta">
+          <i class="fa-regular fa-calendar"></i> 07 Out 2026
+        </span>
+      </div>
+
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png" alt="Foto do médico">
+          <span>
+            <h4>Eduardo</h4>
+            <p>Clínica Geral</p>
+          </span>
+        </div>
+        <span class="infos_consulta">
+          <i class="fa-regular fa-calendar"></i> 14 Jul 2026
+        </span>
+      </div>
+
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png" alt="Foto do médico">
+          <span>
+            <h4>Beatriz</h4>
+            <p>Oftalmologia</p>
+          </span>
+        </div>
+        <span class="infos_consulta">
+          <i class="fa-regular fa-calendar"></i> 21 Ago 2026
+        </span>
+      </div>
+
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png" alt="Foto do médico">
+          <span>
+            <h4>Dr. João T.</h4>
+            <p>Oftalmologia</p>
+          </span>
+        </div>
+        <span class="infos_consulta">
+          <i class="fa-regular fa-calendar"></i> 15 Out 2025
+        </span>
+      </div>
+
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png" alt="Foto da médica">
+          <span>
+            <h4>Dra. Rafaela</h4>
+            <p>Pediatria</p>
+          </span>
+        </div>
+        <span class="infos_consulta">
+          <i class="fa-regular fa-calendar"></i> 09 Jul 2025
+        </span>
+      </div>
+
+      <div class="consulta">
+        <div class="infos_medico">
+          <img src="../img/foto_medico.png" alt="Foto da médica">
+          <span>
+            <h4>Dra. Maria C.</h4>
+            <p>Neurologia</p>
+          </span>
+        </div>
+        <span class="infos_consulta">
+          <i class="fa-regular fa-calendar"></i> 03 Mai 2025
+        </span>
+      </div>
+    </section>
+
+
+  </main>
+
+  <script src="../scripts/paineis.js"></script>
+  <script src="../scripts/painel_especialistas.js"></script>`,
+    unidades: `
+  <aside class="barra_lateral">
+    <h1>saic</h1>
+    <nav>
+      <ul>
+        <li>
+          <button onclick="trocarPagina('especialista','inicio')"><i class="fa-solid fa-house"></i> Início</button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','consultas_marc')">
+            <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','historico_cons')">
+            <i class="fa-regular fa-clock"></i> Histórico de Consultas
+          </button>
+        </li>
+        <li class="ativo">
+          <button onclick="trocarPagina('especialista','unidades')">
+            <i class="fa-solid fa-house"></i> Unidades
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','perfil')">
+            <i class="fa-regular fa-user"></i> Perfil
+          </button>
+        </li>
+        <li class="divisor"></li>
+        <li>
+          <button onclick="sair()">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <h1>Olá, João!</h1>
+        <p>Aqui está sua agenda!</p>
+        <div class="acoes_header">
+        </div>
+      </div>
+
+      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+        <span class="avatar">M</span>
+        <div>
+          <strong>Dr. João T.</strong>
+          <small>Médico</small>
+        </div>
+      </div>
+    </header>
+    <section class="busca_unidade">
+      <div class="area_busca">
+        <h3>Buscar</h3>
+        <div class="input_busca">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="buscar_medico_input" type="text" placeholder="Buscar unidade..." />
+        </div>
+        <div class="unidades">
+          <div class="unidade">
+            <div class="infos_unidade">
+              <img src="../img/foto_unidade.png" alt="Foto da unidade" />
+              <span>
+                <h4>Hospital Santa Aurora</h4>
+              </span>
+            </div>
+            <button class="botao_solicitar_entrada">Solicitar Entrada</button>
+          </div>
+
+          <div class="unidade">
+            <div class="infos_unidade">
+              <img src="../img/foto_unidade.png" alt="Foto da unidade" />
+              <span>
+                <h4>Hospital São Lucas</h4>
+              </span>
+            </div>
+            <button class="botao_solicitar_entrada">Solicitar Entrada</button>
+          </div>
+
+          <div class="unidade">
+            <div class="infos_unidade">
+              <img src="../img/foto_unidade.png" alt="Foto da unidade" />
+              <span>
+                <h4>Hospital Vida Plena</h4>
+              </span>
+            </div>
+            <button class="botao_solicitar_entrada">Solicitar Entrada</button>
+          </div>
+
+          <div class="unidade">
+            <div class="infos_unidade">
+              <img src="../img/foto_unidade.png" alt="Foto da unidade" />
+              <span>
+                <h4>Hospital São Rafael</h4>
+              </span>
+            </div>
+            <button class="botao_solicitar_entrada">Solicitar Entrada</button>
+          </div>
+
+          <div class="unidade">
+            <div class="infos_unidade">
+              <img src="../img/foto_unidade.png" alt="Foto da unidade" />
+              <span>
+                <h4>Hospital Santa Clara</h4>
+              </span>
+            </div>
+            <button class="botao_solicitar_entrada">Solicitar Entrada</button>
+          </div>
+
+          <div class="unidade">
+            <div class="infos_unidade">
+              <img src="../img/foto_unidade.png" alt="Foto da unidade" />
+              <span>
+                <h4>Hospital São Gabriel</h4>
+              </span>
+            </div>
+            <button class="botao_solicitar_entrada">Solicitar Entrada</button>
+          </div>
+
+          <div class="unidade">
+            <div class="infos_unidade">
+              <img src="../img/foto_unidade.png" alt="Foto da unidade" />
+              <span>
+                <h4>Hospital Bom Jesus</h4>
+              </span>
+            </div>
+            <button class="botao_solicitar_entrada">Solicitar Entrada</button>
+          </div>
+
+          <div class="unidade">
+            <div class="infos_unidade">
+              <img src="../img/foto_unidade.png" alt="Foto da unidade" />
+              <span>
+                <h4>Hospital São Miguel</h4>
+              </span>
+            </div>
+            <button class="botao_solicitar_entrada">Solicitar Entrada</button>
+          </div>
+
+          <div class="unidade">
+            <div class="infos_unidade">
+              <img src="../img/foto_unidade.png" alt="Foto da unidade" />
+              <span>
+                <h4>Hospital Santa Maria</h4>
+              </span>
+            </div>
+            <button class="botao_solicitar_entrada">Solicitar Entrada</button>
+          </div>
+
+          <div class="unidade">
+            <div class="infos_unidade">
+              <img src="../img/foto_unidade.png" alt="Foto da unidade" />
+              <span>
+                <h4>Hospital Nossa Senhora das Graças</h4>
+              </span>
+            </div>
+            <button class="botao_solicitar_entrada">Solicitar Entrada</button>
+          </div>
+
+        </div>
+    </section>
+  </main>
+  <script src="../scripts/paineis.js"></script>
+  <script src="../scripts/painel_especialistas.js"></script>`,
+    perfil: `
+  <aside class="barra_lateral">
+    <h1>saic</h1>
+    <nav>
+      <ul>
+        <li>
+          <button onclick="trocarPagina('especialista','inicio')"><i class="fa-solid fa-house"></i> Início</button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','consultas_marc')">
+            <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','historico_cons')">
+            <i class="fa-regular fa-clock"></i> Histórico de Consultas
+          </button>
+        </li>
+        <li>
+          <button onclick="trocarPagina('especialista','unidades')">
+            <i class="fa-solid fa-house"></i> Unidades
+          </button>
+        </li>
+        <li class="ativo">
+          <button onclick="trocarPagina('especialista','perfil')">
+            <i class="fa-regular fa-user"></i> Perfil
+          </button>
+        </li>
+        <li class="divisor"></li>
+        <li>
+          <button onclick="sair()">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Sair
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <h1>Olá, João!</h1>
+        <p>Aqui está sua agenda!</p>
+        <div class="acoes_header">
+        </div>
+      </div>
+
+      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+        <span class="avatar">M</span>
+        <div>
+          <strong>Dr. João T.</strong>
+          <small>Médico</small>
+        </div>
+      </div>
+    </header>
+    <section class="cartao">
+      <form>
+        <div class="perfil_formulario">
+          <section class="informacoes_principais">
+            <h2 id="informacoes_principais">Informações Principais</h2>
+
+            <div class="input_nome_avatar">
+
+              <div class="input_nome">
+                <label for="input_nome" class="input_label">Nome:</label>
+                <input minlength="5" maxlength="100" class="input-texto" type="text" name="nome" id="input_nome"
+                  placeholder="Insira seu nome completo aqui" required value="João T. da Silva">
+              </div>
+
+              <div class="avatar_perfil">
+                <span class="icone_avatar_perfil">JT</span>
+              </div>
+            </div>
+
+            <div>
+              <label for="input_datanasc" class="input_label">Data de Nascimento:</label>
+              <input class="input-texto" type="date" name="datanasc" id="input_datanasc" value="1990-11-20" required>
+            </div>
+          </section>
+
+          <section class="informacoes_contato">
+            <h2 id="informacoes_contato">Informações de Contato</h2>
+
+            <div>
+              <label for="input_email" class="input_label">Email:</label>
+              <input minlength="5" maxlength="150" class="input-texto" type="email" name="email" id="input_email"
+                placeholder="Insira seu email aqui" required value="joaotdasilva@email.com">
+            </div>
+
+            <div>
+              <label for="input_telefone" class="input_label">Telefone:</label>
+              <input minlength="11" maxlength="11" class="input-texto" type="tel" name="telefone" id="input_telefone"
+                placeholder="Insira seu telefone aqui" required value="169987323000">
+            </div>
+          </section>
+        </div>
+
+        <button type="button" class="salvar_alt_button">
+          Salvar Alterações
+        </button>
+      </form>
+    </section>
+  </main>
+  <script src="../scripts/paineis.js"></script>
+  <script src="../scripts/painel_especialistas.js"></script>`
+
+  }
 };
 
-function trocarPagina(destino) {
-  if (destino === "inicio") {
-    document.body.innerHTML = codigos_html.inicio;
-  } else if (destino === "consultas_marc") {
-    document.body.innerHTML = codigos_html.consultas_marc;
-  } else if (destino === "historico_cons") {
-    document.body.innerHTML = codigos_html.historico_cons;
-  } else if (destino === "buscar_med") {
-    document.body.innerHTML = codigos_html.busca_medico;
+function trocarPagina(tipo_painel, destino) {
+  if (tipo_painel == 'paciente') {
+    if (destino === "inicio") {
+      document.body.innerHTML = codigos_html.paciente.inicio;
+    } else if (destino === "consultas_marc") {
+      document.body.innerHTML = codigos_html.paciente.consultas_marc;
+    } else if (destino === "historico_cons") {
+      document.body.innerHTML = codigos_html.paciente.historico_cons;
+    } else if (destino === "buscar_med") {
+      document.body.innerHTML = codigos_html.paciente.busca_medico;
 
-    inicializarBuscaMedico();
+      inicializarBuscaMedico();
+    }
+    else if (destino === "perfil") {
+      document.body.innerHTML = codigos_html.paciente.perfil;
+    }
   }
-  else if (destino === "perfil"){
-    document.body.innerHTML = codigos_html.perfil;
+  else if (tipo_painel == 'especialista') {
+    if (destino === "inicio") {
+      document.body.innerHTML = codigos_html.especialista.inicio;
+    } else if (destino === "consultas_marc") {
+      document.body.innerHTML = codigos_html.especialista.consultas_marc;
+    } else if (destino === "historico_cons") {
+      document.body.innerHTML = codigos_html.especialista.historico_cons;
+    } else if (destino === "unidades") {
+      document.body.innerHTML = codigos_html.especialista.unidades;
+    }
+    else if (destino === "perfil") {
+      document.body.innerHTML = codigos_html.especialista.perfil;
+    }
   }
 }

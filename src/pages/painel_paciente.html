@@ -21,27 +21,27 @@
       <nav>
         <ul>
           <li class="ativo">
-            <button onclick="trocarPagina('inicio')"><i class="fa-solid fa-house"></i> Início</button>
+            <button onclick="trocarPagina('paciente','inicio')"><i class="fa-solid fa-house"></i> Início</button>
           </li>
           <li>
             <button
-              onclick="trocarPagina('consultas_marc')"
+              onclick="trocarPagina('paciente','consultas_marc')"
             >
               <i class="fa-regular fa-calendar-check"></i> Consultas Marcadas
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('historico_cons')">
+            <button onclick="trocarPagina('paciente','historico_cons')">
               <i class="fa-regular fa-clock"></i> Histórico de Consultas
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('buscar_med')">
+            <button onclick="trocarPagina('paciente','buscar_med')">
               <i class="fa-solid fa-magnifying-glass"></i> Buscar Médicos
             </button>
           </li>
           <li>
-            <button onclick="trocarPagina('perfil')">
+            <button onclick="trocarPagina('paciente','perfil')">
               <i class="fa-regular fa-user"></i> Perfil
             </button>
           </li>
@@ -64,13 +64,13 @@
             <button onclick="trocarPagina('historico_cons')" class="botao botao_contorno">
               <i class="fa-regular fa-clock"></i> Ver Histórico Completo
             </button>
-            <button onclick="trocarPagina('buscar_med')" class="botao botao_fundo">
+            <button onclick="trocarPagina('paciente','buscar_med')" class="botao botao_fundo">
               <i class="fa-solid fa-circle-plus"></i> Agendar Nova Consulta
             </button>
           </div>
         </div>
 
-        <div onclick="trocarPagina('perfil')" class="perfil_usuario">
+        <div onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
           <span class="avatar">M</span>
           <div>
             <strong>Miguel Silva</strong>
@@ -107,7 +107,7 @@
           <section>
             <div class="titulo_seccao">
               <h2>Consultas Marcadas</h2>
-              <button onclick="trocarPagina('consultas_marc')" class="link_button">Ver todas</button>
+              <button onclick="trocarPagina('paciente','consultas_marc')" class="link_button">Ver todas</button>
             </div>
 
             <div class="lista_consultas">
@@ -170,7 +170,7 @@
             </div>
             <span class="numero">08</span>
             <p>Consultas realizadas nos últimos 6 meses</p>
-            <button onclick="trocarPagina('historico_cons')" class="botao_detalhes">Ver detalhes</button>
+            <button onclick="trocarPagina('paciente','historico_cons')" class="botao_detalhes">Ver detalhes</button>
           </section>
         </aside>
       </div>
