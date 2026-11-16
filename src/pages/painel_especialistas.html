@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SAIC - Painel do Paciente</title>
+  <title>SAIC - Painel do Especialista</title>
   <link rel="stylesheet" href="../style/paineis.css" />
   <link rel="icon" href="../img/saic.png?v=2" type="image/png" />
 
@@ -32,7 +32,7 @@
         </li>
         <li>
           <button onclick="trocarPagina('especialista','unidades')">
-            <i class="fa-solid fa-house"></i> Unidades
+            <i class="fa-solid fa-hospital"></i> Unidades
           </button>
         </li>
         <li>
@@ -62,13 +62,13 @@
         </div>
       </div>
 
-      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
-        <span class="avatar">M</span>
-        <div>
+      <button type="button" onclick="trocarPagina('especialista','perfil')" class="perfil_usuario">
+        <span class="avatar">JT</span>
+        <span class="perfil_texto">
           <strong>Dr. João T.</strong>
           <small>Médico</small>
-        </div>
-      </div>
+        </span>
+      </button>
     </header>
 
     <div class="grid_painel">
@@ -150,7 +150,7 @@
           </div>
           <span class="numero">37</span>
           <p>Consultas realizadas nos últimos 6 meses</p>
-          <button onclick="trocarPagina('historico_cons')" class="botao_detalhes">Ver detalhes</button>
+          <button onclick="trocarPagina('especialista','historico_cons')" class="botao_detalhes">Ver detalhes</button>
         </section>
       </aside>
     </div>

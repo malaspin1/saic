@@ -114,6 +114,13 @@ header p {
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  /* agora é um <button>: tira o visual padrão do navegador */
+  font-size: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  text-align: left;
 }
 
 .perfil_usuario .avatar {

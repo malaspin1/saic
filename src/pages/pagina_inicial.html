@@ -10,35 +10,34 @@
 
   <body>
     <header>
-      <h1 id="logo">saic</h1>
-      <ul>
-        <li>
-          <a class="list_links" href="pagina_inicial.html">Início</a>
-
-        </li>
-        <li>
-          <a class="list_links" href="cadastroUnidades_login/loginUnidades.html">Saic - Unidades</a>
-        </li>
-        <li>
-          <a class="list_links" href="cadastroEspecialista_login/loginEspecialistas.html"
-            >Saic - Especialistas</a
-          >
-        </li>
-      </ul>
+      <h1 id="logo"><a href="pagina_inicial.html">saic</a></h1>
+      <nav>
+        <ul>
+          <li>
+            <a class="list_links" href="pagina_inicial.html">Início</a>
+          </li>
+          <li>
+            <a class="list_links" href="cadastroUnidades_login/loginUnidades.html">Saic - Unidades</a>
+          </li>
+          <li>
+            <a class="list_links" href="cadastroEspecialista_login/loginEspecialistas.html">Saic - Especialistas</a>
+          </li>
+        </ul>
+      </nav>
       <div class="header_buttons_container">
-        <button class="botao botao_entrar">Entrar</button>
-        <button class="botao botao_criar">Criar conta</button>
+        <a class="botao botao_entrar" href="cadastro_login/login.html">Entrar</a>
+        <a class="botao botao_criar" href="cadastro_login/cadastro.html">Criar conta</a>
       </div>
     </header>
     <main>
       <section class="banner_1">
         <div class="banner_botao_container">
-          <button class="banner_botao botao_fundo">
+          <a class="banner_botao botao_fundo" href="cadastro_login/login.html">
             Agendar Consulta Agora
-          </button>
-          <button class="banner_botao botao_contorno">
+          </a>
+          <a class="banner_botao botao_contorno" href="#especialidades">
             Ver Especialidades
-          </button>
+          </a>
         </div>
       </section>
 
@@ -54,24 +53,24 @@
           </div>
           <div id="como_funciona_container">
             <div class="como_funciona_card">
-              <h3 class="numero_card">01</h3>
-              <h4 class="titulo_card">Crie sua conta rápida</h4>
+              <span class="numero_card">01</span>
+              <h3 class="titulo_card">Crie sua conta rápida</h3>
               <p class="paragrafo_card">
                 Complete seu cadastro básico com CPF e telefone em menos de 2
                 minutos de forma totalmente segura.
               </p>
             </div>
             <div class="como_funciona_card">
-              <h3 class="numero_card">02</h3>
-              <h4 class="titulo_card">Busque a especialidade</h4>
+              <span class="numero_card">02</span>
+              <h3 class="titulo_card">Busque a especialidade</h3>
               <p class="paragrafo_card">
                 Pesquise por médicos, psicólogos, dentistas ou exames por
                 localização, plano ou atendimento particular.
               </p>
             </div>
             <div class="como_funciona_card">
-              <h3 class="numero_card">03</h3>
-              <h4 class="titulo_card">Escolha o melhor horário</h4>
+              <span class="numero_card">03</span>
+              <h3 class="titulo_card">Escolha o melhor horário</h3>
               <p class="paragrafo_card">
                 Compare agendas virtuais integradas e marque em tempo real, com
                 confirmação e lembretes instantâneos.
@@ -80,18 +79,18 @@
           </div>
         </div>
       </section>
-      <footer class="footer">
-        <h2 class="footer_tittle">
-          Pronto para simplificar sua rotina de agendamentos?
-        </h2>
-        <p class="footer_a">
-          Seja você um paciente buscando atendimento ágil ou um profissional
-          procurando otimizar seu consultório. Crie sua conta gratuita em poucos
-          passos.
-        </p>
-        <button class="criar_botao">Criar Conta</button>
-      </footer>
     </main>
+    <footer class="footer">
+      <h2 class="footer_tittle">
+        Pronto para simplificar sua rotina de agendamentos?
+      </h2>
+      <p class="footer_a">
+        Seja você um paciente buscando atendimento ágil ou um profissional
+        procurando otimizar seu consultório. Crie sua conta gratuita em poucos
+        passos.
+      </p>
+      <a class="criar_botao" href="cadastro_login/cadastro.html">Criar Conta</a>
+    </footer>
     <script>
 
       document

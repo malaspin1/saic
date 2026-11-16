@@ -61,7 +61,7 @@
           <h1>Olá, Miguel!</h1>
           <p>Como podemos cuidar da sua saúde hoje?</p>
           <div class="acoes_header">
-            <button onclick="trocarPagina('historico_cons')" class="botao botao_contorno">
+            <button onclick="trocarPagina('paciente','historico_cons')" class="botao botao_contorno">
               <i class="fa-regular fa-clock"></i> Ver Histórico Completo
             </button>
             <button onclick="trocarPagina('paciente','buscar_med')" class="botao botao_fundo">
@@ -70,13 +70,13 @@
           </div>
         </div>
 
-        <div onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
+        <button type="button" onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
           <span class="avatar">M</span>
-          <div>
+          <span class="perfil_texto">
             <strong>Miguel Silva</strong>
             <small>Paciente</small>
-          </div>
-        </div>
+          </span>
+        </button>
       </header>
 
       <div class="grid_painel">

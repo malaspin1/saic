@@ -55,13 +55,13 @@ const codigos_html = {
           </div>
         </div>
 
-        <div onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
+        <button type="button" onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
           <span class="avatar">M</span>
-          <div>
+          <span class="perfil_texto">
             <strong>Miguel Silva</strong>
             <small>Paciente</small>
-          </div>
-        </div>
+          </span>
+        </button>
       </header>
 
       <div class="grid_painel">
@@ -204,13 +204,13 @@ const codigos_html = {
                 <p>Essas são suas consultas marcadas!</p>
             </div>
 
-            <div onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
+            <button type="button" onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
                 <span class="avatar">M</span>
-                <div>
+                <span class="perfil_texto">
                     <strong>Miguel Silva</strong>
                     <small>Paciente</small>
-                </div>
-            </div>
+                </span>
+            </button>
         </header>
 
         <section class="consultas_marcadas">
@@ -290,13 +290,13 @@ const codigos_html = {
         <p>Esse é seu histórico de consultas</p>
       </div>
 
-      <div onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
+      <button type="button" onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
         <span class="avatar">M</span>
-        <div>
+        <span class="perfil_texto">
           <strong>Miguel Silva</strong>
           <small>Paciente</small>
-        </div>
-      </div>
+        </span>
+      </button>
     </header>
 
     <section class="historico_consultas">
@@ -375,7 +375,7 @@ const codigos_html = {
       <nav>
         <ul>
           <li>
-            <button onclick="trocarPagina('paciente','paciente','inicio')">
+            <button onclick="trocarPagina('paciente','inicio')">
               <i class="fa-solid fa-house"></i> Início
             </button>
           </li>
@@ -418,13 +418,13 @@ const codigos_html = {
           <p>Busque Médicos para agendar consultas</p>
         </div>
 
-        <div onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
+        <button type="button" onclick="trocarPagina('paciente','perfil')" class="perfil_usuario">
           <span class="avatar">M</span>
-          <div>
+          <span class="perfil_texto">
             <strong>Miguel Silva</strong>
             <small>Paciente</small>
-          </div>
-        </div>
+          </span>
+        </button>
       </header>
 
       <section class="busca_medico">
@@ -1124,7 +1124,7 @@ const codigos_html = {
           </li>
           <li>
             <button onclick="trocarPagina('especialista','unidades')">
-              <i class="fa-solid fa-house"></i> Unidades
+              <i class="fa-solid fa-hospital"></i> Unidades
             </button>
           </li>
           <li>
@@ -1154,13 +1154,13 @@ const codigos_html = {
           </div>
         </div>
 
-        <div onclick="trocarPagina('perfil')" class="perfil_usuario">
-          <span class="avatar">M</span>
-          <div>
+        <button type="button" onclick="trocarPagina('especialista','perfil')" class="perfil_usuario">
+          <span class="avatar">JT</span>
+          <span class="perfil_texto">
             <strong>Dr. João T.</strong>
             <small>Médico</small>
-          </div>
-        </div>
+          </span>
+        </button>
       </header>
 
       <div class="grid_painel">
@@ -1250,14 +1250,11 @@ const codigos_html = {
             </div>
             <span class="numero">37</span>
             <p>Consultas realizadas nos últimos 6 meses</p>
-            <button onclick="trocarPagina('historico_cons')" class="botao_detalhes">Ver detalhes</button>
+            <button onclick="trocarPagina('especialista','historico_cons')" class="botao_detalhes">Ver detalhes</button>
           </section>
         </aside>
       </div>
-    </main>
-
-    <script src="../scripts/paineis.js"></script>
-    <script src="../scripts/painel_especialistas.js"></script>`,
+    </main>`,
     consultas_marc: `
   <aside class="barra_lateral">
     <h1>saic</h1>
@@ -1278,7 +1275,7 @@ const codigos_html = {
         </li>
         <li>
           <button onclick="trocarPagina('especialista','unidades')">
-            <i class="fa-solid fa-house"></i> Unidades
+            <i class="fa-solid fa-hospital"></i> Unidades
           </button>
         </li>
         <li>
@@ -1303,13 +1300,13 @@ const codigos_html = {
         <p>Aqui está sua agenda!</p>
       </div>
 
-      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
-        <span class="avatar">M</span>
-        <div>
+      <button type="button" onclick="trocarPagina('especialista','perfil')" class="perfil_usuario">
+        <span class="avatar">JT</span>
+        <span class="perfil_texto">
           <strong>Dr. João T.</strong>
           <small>Médico</small>
-        </div>
-      </div>
+        </span>
+      </button>
     </header>
 
     <section class="consultas_marcadas">
@@ -1376,7 +1373,7 @@ const codigos_html = {
         </li>
         <li>
           <button onclick="trocarPagina('especialista','unidades')">
-            <i class="fa-solid fa-house"></i> Unidades
+            <i class="fa-solid fa-hospital"></i> Unidades
           </button>
         </li>
         <li>
@@ -1403,13 +1400,13 @@ const codigos_html = {
         </div>
       </div>
 
-      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
-        <span class="avatar">M</span>
-        <div>
+      <button type="button" onclick="trocarPagina('especialista','perfil')" class="perfil_usuario">
+        <span class="avatar">JT</span>
+        <span class="perfil_texto">
           <strong>Dr. João T.</strong>
           <small>Médico</small>
-        </div>
-      </div>
+        </span>
+      </button>
     </header>
 
     <section class="historico_consultas">
@@ -1559,10 +1556,7 @@ const codigos_html = {
     </section>
 
 
-  </main>
-
-  <script src="../scripts/paineis.js"></script>
-  <script src="../scripts/painel_especialistas.js"></script>`,
+  </main>`,
     unidades: `
   <aside class="barra_lateral">
     <h1>saic</h1>
@@ -1583,7 +1577,7 @@ const codigos_html = {
         </li>
         <li class="ativo">
           <button onclick="trocarPagina('especialista','unidades')">
-            <i class="fa-solid fa-house"></i> Unidades
+            <i class="fa-solid fa-hospital"></i> Unidades
           </button>
         </li>
         <li>
@@ -1610,13 +1604,13 @@ const codigos_html = {
         </div>
       </div>
 
-      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
-        <span class="avatar">M</span>
-        <div>
+      <button type="button" onclick="trocarPagina('especialista','perfil')" class="perfil_usuario">
+        <span class="avatar">JT</span>
+        <span class="perfil_texto">
           <strong>Dr. João T.</strong>
           <small>Médico</small>
-        </div>
-      </div>
+        </span>
+      </button>
     </header>
     <section class="busca_unidade">
       <div class="area_busca">
@@ -1728,9 +1722,7 @@ const codigos_html = {
 
         </div>
     </section>
-  </main>
-  <script src="../scripts/paineis.js"></script>
-  <script src="../scripts/painel_especialistas.js"></script>`,
+  </main>`,
     perfil: `
   <aside class="barra_lateral">
     <h1>saic</h1>
@@ -1751,7 +1743,7 @@ const codigos_html = {
         </li>
         <li>
           <button onclick="trocarPagina('especialista','unidades')">
-            <i class="fa-solid fa-house"></i> Unidades
+            <i class="fa-solid fa-hospital"></i> Unidades
           </button>
         </li>
         <li class="ativo">
@@ -1778,13 +1770,13 @@ const codigos_html = {
         </div>
       </div>
 
-      <div onclick="trocarPagina('perfil')" class="perfil_usuario">
-        <span class="avatar">M</span>
-        <div>
+      <button type="button" onclick="trocarPagina('especialista','perfil')" class="perfil_usuario">
+        <span class="avatar">JT</span>
+        <span class="perfil_texto">
           <strong>Dr. João T.</strong>
           <small>Médico</small>
-        </div>
-      </div>
+        </span>
+      </button>
     </header>
     <section class="cartao">
       <form>
@@ -1833,9 +1825,7 @@ const codigos_html = {
         </button>
       </form>
     </section>
-  </main>
-  <script src="../scripts/paineis.js"></script>
-  <script src="../scripts/painel_especialistas.js"></script>`
+  </main>`
 
   }
 };
