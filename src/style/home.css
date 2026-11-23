@@ -72,9 +72,12 @@ header ul li {
 
 .banner_1 {
   background-image: url(../img/banner1.png);
-  height: 80vh;
+  background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   width: 77vw;
+  aspect-ratio: 1470 / 702;
+  height: auto;
   margin: auto;
   position: relative;
 }

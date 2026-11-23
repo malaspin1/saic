@@ -94,13 +94,14 @@
     <script>
 
       document
-        .querySelector(".banner_botao:last-child")
+        .querySelector(".banner_botao:first-child")
         .addEventListener("click", function (event) {
           event.preventDefault();
-          document.getElementById("especialidades").scrollIntoView({ behavior: "smooth" });
+
+          window.location.href = "./cadastro_login/login.html";
         });
       document
-        .querySelector(".banner_botao:first-child")
+        .querySelector(".banner_botao:last-child")
         .addEventListener("click", function (event) {
           event.preventDefault();
 
