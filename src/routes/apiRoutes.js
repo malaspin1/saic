@@ -4,11 +4,13 @@ import especialidadesController from "../controller/especialidadesController.js"
 import pacienteController from "../controller/pacienteController.js";
 import medicoController from "../controller/medicoController.js";
 import unidadesController from "../controller/unidadesController.js";
+import agendamentoController from "../controller/agendamentoController.js";
 
 const router = express.Router();
 
 // Rotas Unidade
 router.post("/unidade", unidadesController.createUnidades);
+router.post("/unidadelogin", unidadesController.loginUnidade)
 router.get("/unidade", unidadesController.getAllUnidades);
 router.get("/unidade/:id", unidadesController.getUnidadesById);
 router.put("/unidade/:id", unidadesController.updateUnidades);
@@ -23,6 +25,7 @@ router.delete("/especialidade/:id", especialidadesController.deleteEspecialidade
 
 // Rotas Paciente
 router.post("/paciente", pacienteController.createPaciente);
+router.post("/pacientelogin", pacienteController.loginPaciente)
 router.get("/paciente", pacienteController.getAllPacientes);
 router.get("/paciente/:id", pacienteController.getPacienteById);
 router.put("/paciente/:id", pacienteController.updatePaciente);
@@ -30,9 +33,18 @@ router.delete("/paciente/:id", pacienteController.deletePaciente);
 
 // Rotas Médico
 router.post("/medico", medicoController.createMedico);
+router.post("/medicologin", medicoController.loginMedico);
 router.get("/medico", medicoController.getAllMedicos);
 router.get("/medico/:id", medicoController.getMedicoById);
 router.put("/medico/:id", medicoController.updateMedico);
 router.delete("/medico/:id", medicoController.deleteMedico);
+
+// ROTAS DE AGENDAMENTOS
+
+router.post("/agendamentos", agendamentoController.createAgendamento);
+router.get("/agendamentos", agendamentoController.getAllAgendamentos);
+router.get("/agendamentos/:id", agendamentoController.getAgendamentoById);
+router.put("/agendamentos/:id", agendamentoController.updateAgendamento);
+router.delete("/agendamentos/:id", agendamentoController.deleteAgendamento);
 
 export default router;
