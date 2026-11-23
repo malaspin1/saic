@@ -919,3 +919,87 @@ header p {
 .botao_solicitar_entrada:hover {
   background-color: #34b88c;
 }
+
+/* PAINEL DA UNIDADE */
+.grid_painel > aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.medicos_unidade {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo_medicos_unidade {
+  margin-top: 30px;
+}
+
+.medicos_unidade .medicos {
+  margin-bottom: 4px;
+}
+
+.botoes_solicitacao {
+  display: flex;
+  gap: 10px;
+}
+
+.botao_aceitar {
+  color: white;
+  background-color: #35a77a;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botao_aceitar:hover {
+  background-color: #2f9a70;
+}
+
+.sem_solicitacoes,
+.sem_resultados {
+  display: none;
+  color: #64748b;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.texto_pop_up {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.linha_inputs {
+  display: flex;
+  gap: 12px;
+}
+
+.linha_inputs > div {
+  flex: 1;
+}
+
+.linha_inputs > .input_numero {
+  flex: 0 0 90px;
+}
+
+textarea.input-texto {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.botao_voltar_contorno {
+  background-color: transparent;
+  color: #136c84;
+  border: 1px solid #136c84;
+}
+
+.botao_voltar_contorno:hover {
+  background-color: #f0f7fa;
+}
