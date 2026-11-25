@@ -1617,7 +1617,7 @@ const codigos_html = {
         <h3>Buscar</h3>
         <div class="input_busca">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input class="buscar_medico_input" type="text" placeholder="Buscar unidade..." />
+          <input class="buscar_unidade_input" type="text" placeholder="Buscar unidade..." />
         </div>
         <div class="unidades">
           <div class="unidade">
@@ -1721,6 +1721,8 @@ const codigos_html = {
           </div>
 
         </div>
+        <p class="sem_resultados">Nenhuma unidade encontrada.</p>
+      </div>
     </section>
   </main>`,
     perfil: `
@@ -2616,6 +2618,8 @@ function trocarPagina(tipo_painel, destino) {
       document.body.innerHTML = codigos_html.especialista.historico_cons;
     } else if (destino === "unidades") {
       document.body.innerHTML = codigos_html.especialista.unidades;
+
+      inicializarBuscaUnidade();
     }
     else if (destino === "perfil") {
       document.body.innerHTML = codigos_html.especialista.perfil;
